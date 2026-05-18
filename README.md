@@ -108,4 +108,4 @@ http://localhost:5000
 
 ---
 
-<p align="center">Desenvolvido por <a href="https://github.com/JvFaraco">João Victor Faraco</a> · © 2025</p>
+<p align="center">Desenvolvido por <a href="https://github.com/JvFaraco">João Victor Faraco</a> · © 2026</p>
