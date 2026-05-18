@@ -1,0 +1,157 @@
+:root{
+
+--blue:#005BAC;
+--blue-h:#004a8f;
+
+--yellow:#F5B400;
+
+--bg:#0b0f14;
+--bg2:#111620;
+
+--card:#161d2a;
+
+--border:rgba(255,255,255,.07);
+--border2:rgba(255,255,255,.14);
+
+--text:#e8edf5;
+--muted:#7a8aa0;
+
+--r:14px;
+
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+[data-theme="light"]{
+
+--bg:#f0f4f9;
+--bg2:#e6ecf5;
+
+--card:#fff;
+
+--border:rgba(0,91,172,.1);
+--border2:rgba(0,91,172,.2);
+
+--text:#0d1a2e;
+--muted:#5a6e8a;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+min-height:100vh;
+transition:
+background .18s,
+color .18s;
+}
+
+button,
+input,
+select,
+textarea{
+font:inherit;
+}
+
+a{
+color:inherit;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border2);
+border-radius:var(--r);
+}
+
+.page-center{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px;
+}
+/* ── Assistente IA — bolinha flutuante ────────────────────────────── */
+#aiBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 999px;
+  padding: 13px 13px;
+  box-shadow: 0 4px 24px rgba(0,91,172,.45);
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 52px;          /* começa como bolinha */
+  transition:
+    max-width .35s cubic-bezier(.4,0,.2,1),
+    padding .35s,
+    box-shadow .2s;
+}
+
+#aiBtn:hover {
+  max-width: 200px;         /* expande mostrando o label */
+  padding: 13px 20px 13px 16px;
+  box-shadow: 0 8px 32px rgba(0,91,172,.6);
+}
+
+#aiBtn svg {
+  flex-shrink: 0;
+}
+
+.ai-label {
+  opacity: 0;
+  transition: opacity .2s .1s;
+  pointer-events: none;
+}
+
+#aiBtn:hover .ai-label {
+  opacity: 1;
+}
+
+/* ponto pulsante indicando "online" */
+.ai-ping {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #2db86a;
+  box-shadow: 0 0 0 0 rgba(45,184,106,.6);
+  animation: ai-pulse 2s ease-out infinite;
+  transition: opacity .2s;
+}
+
+#aiBtn:hover .ai-ping {
+  opacity: 0;               /* esconde o ping quando expandido */
+}
+
+@keyframes ai-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(45,184,106,.6); }
+  70%  { box-shadow: 0 0 0 7px rgba(45,184,106,0); }
+  100% { box-shadow: 0 0 0 0 rgba(45,184,106,0); }
+}

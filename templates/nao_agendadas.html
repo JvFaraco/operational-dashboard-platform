@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}A365 Ops – O.S Não Agendadas{% endblock %}
+
+{% block styles %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/nao_agendadas.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="copy-flash" id="copyFlash">✓ Nº OS copiado!</div>
+
+<header class="header">
+    <a href="{{ url_for('home') }}" class="logo-link">
+    <div class="logo-name">A365 Ops</div>
+    <div class="logo-tag">
+      Central Operacional
+    </div>
+    </a>
+  <div class="header-right">
+    <span class="hbadge" id="headerCount">0 OS</span>
+    <button class="btn-icon" id="themeToggle" title="Alternar tema">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <div>
+    <div class="sbt">Base de Dados</div>
+    <div id="metaInfo" style="font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:10px;">
+      Carregando...
+    </div>
+    <a href="/login" class="btn-p" style="text-decoration:none;display:flex;align-items:center;gap:8px;justify-content:center;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Atualizar base
+    </a>
+  </div>
+  <div class="sdiv"></div>
+  <div>
+    <div class="sbt">Tipo de O.S</div>
+    <div class="tos-bar">
+      <button class="tos-btn" data-tos="Instalação" onclick="toggleTipoOS('Instalação')">📦 Instalação</button>
+      <button class="tos-btn" data-tos="Manutenção" onclick="toggleTipoOS('Manutenção')">🔧 Manutenção</button>
+      <button class="tos-btn" data-tos="Desinstalação" onclick="toggleTipoOS('Desinstalação')">🗑️ Desinstalação</button>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div>
+    <div class="sbt">Tipo de Técnico</div>
+    <div class="cb-item" id="cb-EPV" style="--ac:#005BAC" onclick="toggleTipo('EPV')">
+      <div class="cb-box"></div><span class="cb-label">EPV</span><span class="cb-count" id="cnt-EPV">0</span>
+    </div>
+    <div class="cb-item" id="cb-PJ" style="--ac:#8b5cf6" onclick="toggleTipo('PJ')">
+      <div class="cb-box"></div><span class="cb-label">PJ</span><span class="cb-count" id="cnt-PJ">0</span>
+    </div>
+    <div class="cb-item" id="cb-COMERCIAL" style="--ac:#F5B400" onclick="toggleTipo('COMERCIAL')">
+      <div class="cb-box"></div><span class="cb-label">Comercial</span><span class="cb-count" id="cnt-COMERCIAL">0</span>
+    </div>
+    <div class="cb-item" id="cb-RESTANTE" style="--ac:#e08c00" onclick="toggleTipo('RESTANTE')">
+      <div class="cb-box"></div><span class="cb-label">Restante</span><span class="cb-count" id="cnt-RESTANTE">0</span>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div>
+    <div class="sbt">Tipo de Defeito</div>
+    <div class="ms-wrap" id="ms-def">
+      <button class="ms-btn" type="button" id="ms-def-btn">
+        <span id="ms-def-txt">Todos os defeitos</span>
+        <span class="ms-cnt" id="ms-def-cnt">0</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="ms-dd" id="ms-def-dd">
+        <div class="ms-srch"><input type="text" id="ms-def-srch" placeholder="Buscar defeito..."></div>
+        <div id="ms-def-items"></div>
+      </div>
+    </div>
+    <div id="ms-def-tags" style="display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;"></div>
+  </div>
+  <div class="sdiv"></div>
+  <div>
+    <div class="sbt">Faixa de Dias</div>
+    <div class="bpills">
+      <div class="bpill" data-b="0-2" onclick="toggleBucket('0-2')">0-2 dias</div>
+      <div class="bpill" data-b="3-6" onclick="toggleBucket('3-6')">3-6 dias</div>
+      <div class="bpill" data-b="7-15" onclick="toggleBucket('7-15')">7-15 dias</div>
+      <div class="bpill" data-b="15+" onclick="toggleBucket('15+')">+15 dias</div>
+    </div>
+  </div>
+  <div class="sdiv"></div>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:7px;">
+    <button class="btn-s" id="exportBtn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Exportar CSV filtrado
+    </button>
+    <button class="btn-g" id="resetBtn">Limpar filtros</button>
+  </div>
+</aside>
+
+<main class="main">
+  <!-- KPIS -->
+  <div class="krow">
+    <div class="kpi accent" id="kpi-total">
+      <div class="kico" style="color:var(--yellow);"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="klab">Total O.S</div>
+      <div class="kval" id="kTotal" style="color:var(--yellow);">0</div>
+      <div class="khi">não agendadas</div>
+    </div>
+    <div class="kpi" id="kpi-EPV" style="--kc:#005BAC" onclick="toggleTipo('EPV')">
+      <div class="kico" style="color:#005BAC;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div class="klab">EPV</div>
+      <div class="kval" id="kEpv" style="color:#005BAC;">0</div>
+      <div class="khi">Clique para filtrar</div>
+    </div>
+    <div class="kpi" id="kpi-PJ" style="--kc:#8b5cf6" onclick="toggleTipo('PJ')">
+      <div class="kico" style="color:#8b5cf6;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+      <div class="klab">PJ</div>
+      <div class="kval" id="kPj" style="color:#8b5cf6;">0</div>
+      <div class="khi">Clique para filtrar</div>
+    </div>
+    <div class="kpi" id="kpi-COMERCIAL" style="--kc:#F5B400" onclick="toggleTipo('COMERCIAL')">
+      <div class="kico" style="color:#F5B400;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="klab">Comercial</div>
+      <div class="kval" id="kComl" style="color:#F5B400;">0</div>
+      <div class="khi">Clique para filtrar</div>
+    </div>
+    <div class="kpi" id="kpi-30" style="--kc:#e05050;border-color:rgba(224,80,80,.35);background:linear-gradient(135deg,var(--card),rgba(224,80,80,.07));position:relative;overflow:hidden;" onclick="filtrar30()">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e05050,#ff8080);"></div>
+      <div class="kico" style="color:#e05050;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="klab" style="color:#e05050;">Crítico +30 dias</div>
+      <div class="kval" id="k30" style="color:#e05050;">0</div>
+      <div class="khi">Clique para filtrar</div>
+    </div>
+  </div>
+
+  <!-- GRÁFICOS -->
+  <div class="cgrid">
+    <div class="card">
+      <div class="ch"><span class="ct">OS por Faixa de Dias</span><span style="font-size:10px;color:var(--muted);">Clique para filtrar</span></div>
+      <div class="cbody"><canvas id="diasChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="ch"><span class="ct">Principais Defeitos</span><span class="pill" id="defPill">0 tipos</span></div>
+      <div class="cbody"><canvas id="defChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- TABELA -->
+  <div class="card">
+    <div class="ch">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="ct">Detalhamento de O.S</span>
+        <span style="font-size:10px;color:var(--muted);">Clique no Nº OS para copiar</span>
+      </div>
+      <span class="pill" id="detPill">0 registros</span>
+    </div>
+    <div class="tw">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th data-col="Nº OS" onclick="sortBy('Nº OS')">Nº OS<span class="si"></span></th>
+            <th data-col="Defeito" onclick="sortBy('Defeito')">Defeito<span class="si"></span></th>
+            <th data-col="Técnico" onclick="sortBy('Técnico')">Técnico<span class="si"></span></th>
+            <th data-col="Tipo" onclick="sortBy('Tipo')">Tipo<span class="si"></span></th>
+            <th data-col="Dias" onclick="sortBy('Dias')" class="sd">Dias<span class="si"></span></th>
+            <th data-col="Fantasia" onclick="sortBy('Fantasia')">Cliente<span class="si"></span></th>
+          </tr>
+        </thead>
+        <tbody id="detBody">
+      <tr>
+        <td colspan="7">
+          <div class="emp">
+            Carregando dados...
+          </div>
+        </td>
+      </tr>
+    </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+</div>
+<div id="toast"></div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/nao_agendadas.js') }}"></script>
+
+{% endblock %}
