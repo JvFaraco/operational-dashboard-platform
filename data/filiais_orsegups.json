@@ -1,0 +1,252 @@
+[
+  {
+    "nome": "Sede Regional — São José",
+    "tipo": "sede",
+    "cidade": "São José",
+    "estado": "SC",
+    "endereco": "Rua Getúlio Vargas, 2729 - Centro",
+    "cep": "88103-400",
+    "lat": -27.6089,
+    "lng": -48.6347
+  },
+  {
+    "nome": "Filial Joinville",
+    "tipo": "filial",
+    "cidade": "Joinville",
+    "estado": "SC",
+    "endereco": "Rua Max Colin, 1465 - América",
+    "cep": "89204-041",
+    "lat": -26.2927,
+    "lng": -48.8496
+  },
+  {
+    "nome": "Filial Jaraguá do Sul",
+    "tipo": "filial",
+    "cidade": "Jaraguá do Sul",
+    "estado": "SC",
+    "endereco": "Rua Domingos Rodrigues da Nova, 462 - Centro",
+    "cep": "89251-640",
+    "lat": -26.4863,
+    "lng": -49.0711
+  },
+  {
+    "nome": "Filial Blumenau",
+    "tipo": "filial",
+    "cidade": "Blumenau",
+    "estado": "SC",
+    "endereco": "Rua Peru, 19 - Ponta Aguda",
+    "cep": "89050-065",
+    "lat": -26.9217,
+    "lng": -49.0717
+  },
+  {
+    "nome": "Filial Brusque",
+    "tipo": "filial",
+    "cidade": "Brusque",
+    "estado": "SC",
+    "endereco": "Rua Brusque, 1346 - Centro",
+    "cep": "88302-000",
+    "lat": -27.0981,
+    "lng": -48.9155
+  },
+  {
+    "nome": "Filial Rio do Sul",
+    "tipo": "filial",
+    "cidade": "Rio do Sul",
+    "estado": "SC",
+    "endereco": "Rua Presidente Kennedy, 64 - Centro",
+    "cep": "89160-139",
+    "lat": -27.2135,
+    "lng": -49.6398
+  },
+  {
+    "nome": "Filial Lages",
+    "tipo": "filial",
+    "cidade": "Lages",
+    "estado": "SC",
+    "endereco": "Rua Frei Gabriel, 480 - Centro",
+    "cep": "88502-030",
+    "lat": -27.8148,
+    "lng": -50.3241
+  },
+  {
+    "nome": "Filial Chapecó",
+    "tipo": "filial",
+    "cidade": "Chapecó",
+    "estado": "SC",
+    "endereco": "Rua Benjamin Constant, 393 E - Centro",
+    "cep": "89801-070",
+    "lat": -27.0981,
+    "lng": -52.6189
+  },
+  {
+    "nome": "Filial Florianópolis",
+    "tipo": "filial",
+    "cidade": "Florianópolis",
+    "estado": "SC",
+    "endereco": "Felipe Schmidt, 51 - Sala 404 - Centro",
+    "cep": "88010-000",
+    "lat": -27.596,
+    "lng": -48.5492
+  },
+  {
+    "nome": "Filial Criciúma",
+    "tipo": "filial",
+    "cidade": "Criciúma",
+    "estado": "SC",
+    "endereco": "Rua Thomé de Souza, 379 - Michel",
+    "cep": "88803-140",
+    "lat": -28.6789,
+    "lng": -49.3712
+  },
+  {
+    "nome": "Filial Itajaí",
+    "tipo": "filial",
+    "cidade": "Itajaí",
+    "estado": "SC",
+    "endereco": "Rua Jucilia Maria da Silva Miguel, 1082 C - Praia Brava",
+    "cep": "88306-827",
+    "lat": -26.9031,
+    "lng": -48.6742
+  },
+  {
+    "nome": "Filial Curitiba",
+    "tipo": "filial",
+    "cidade": "Curitiba",
+    "estado": "PR",
+    "endereco": "Rua Alferes Poli, 2471 - Parolin",
+    "cep": "80220-051",
+    "lat": -25.4534,
+    "lng": -49.2742
+  },
+  {
+    "nome": "Filial São José dos Pinhais",
+    "tipo": "filial",
+    "cidade": "São José dos Pinhais",
+    "estado": "PR",
+    "endereco": "Rua Laura Lopes Latuf, 2120 - Cruzeiro",
+    "cep": "83010-350",
+    "lat": -25.5316,
+    "lng": -49.2043
+  },
+  {
+    "nome": "Filial São Paulo",
+    "tipo": "filial",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "endereco": "Rua Cunha Gago, 587 - Pinheiros",
+    "cep": "05421-001",
+    "lat": -23.5638,
+    "lng": -46.6927
+  },
+  {
+    "nome": "Filial Campinas",
+    "tipo": "filial",
+    "cidade": "Campinas",
+    "estado": "SP",
+    "endereco": "Av. Almeida Garret, 939 - Parque Taquaral",
+    "cep": "13087-291",
+    "lat": -22.8905,
+    "lng": -47.0636
+  },
+  {
+    "nome": "Filial Jundiaí",
+    "tipo": "filial",
+    "cidade": "Jundiaí",
+    "estado": "SP",
+    "endereco": "Rua Messina, 99 - Jardim Messina",
+    "cep": "13207-480",
+    "lat": -23.1883,
+    "lng": -46.9073
+  },
+  {
+    "nome": "Filial Ribeirão Preto",
+    "tipo": "filial",
+    "cidade": "Ribeirão Preto",
+    "estado": "SP",
+    "endereco": "Rua Altino Arantes, 1928 - Jardim América",
+    "cep": "14020-200",
+    "lat": -21.1688,
+    "lng": -47.8103
+  },
+  {
+    "nome": "Filial São José do Rio Preto",
+    "tipo": "filial",
+    "cidade": "São José do Rio Preto",
+    "estado": "SP",
+    "endereco": "Av. Fernando Corrêa Pires, 3574 - Vila Redentora",
+    "cep": "15015-040",
+    "lat": -20.8312,
+    "lng": -49.3765
+  },
+  {
+    "nome": "Filial Porto Alegre",
+    "tipo": "filial",
+    "cidade": "Porto Alegre",
+    "estado": "RS",
+    "endereco": "Rua Dom Pedro II, 524 - São João",
+    "cep": "90550-140",
+    "lat": -30.0282,
+    "lng": -51.2189
+  },
+  {
+    "nome": "Filial Xangri-Lá",
+    "tipo": "filial",
+    "cidade": "Xangri-Lá",
+    "estado": "RS",
+    "endereco": "Rua Paraguassu, 4000 - Atlântida",
+    "cep": "95588-000",
+    "lat": -29.9456,
+    "lng": -50.1253
+  },
+  {
+    "nome": "Filial Novo Hamburgo",
+    "tipo": "filial",
+    "cidade": "Novo Hamburgo",
+    "estado": "RS",
+    "endereco": "Novo Hamburgo - RS",
+    "cep": "",
+    "lat": -29.6783,
+    "lng": -51.133
+  },
+  {
+    "nome": "Filial Goiânia",
+    "tipo": "filial",
+    "cidade": "Goiânia",
+    "estado": "GO",
+    "endereco": "Rua 87, 393 - Setor Sul",
+    "cep": "74093-300",
+    "lat": -16.7042,
+    "lng": -49.2627
+  },
+  {
+    "nome": "Filial Palmas",
+    "tipo": "filial",
+    "cidade": "Palmas",
+    "estado": "TO",
+    "endereco": "Quadra 108 Sul, Alameda 12 LT05 - Plano Diretor Sul",
+    "cep": "77020-114",
+    "lat": -10.245,
+    "lng": -48.3245
+  },
+  {
+    "nome": "Filial Belo Horizonte",
+    "tipo": "filial",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "endereco": "Avenida Alfredo Camarate, 339 - Pampulha",
+    "cep": "31310-000",
+    "lat": -19.9167,
+    "lng": -43.9345
+  },
+  {
+    "nome": "Filial Brasília",
+    "tipo": "filial",
+    "cidade": "Brasília",
+    "estado": "DF",
+    "endereco": "SMA, Conj. B, Loja 19",
+    "cep": "72429-010",
+    "lat": -15.8335,
+    "lng": -48.0504
+  }
+]

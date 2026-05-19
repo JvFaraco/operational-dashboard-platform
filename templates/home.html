@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+
+{% block title %}A365 Ops{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<header class="header">
+
+  <div class="logo">
+
+    <div class="logo-name">A365 Ops</div>
+
+    <div class="logo-tag">
+      Central Operacional
+    </div>
+
+  </div>
+
+  <div class="header-right">
+
+    <button
+      class="theme-btn"
+      id="themeBtn"
+      title="Alternar tema"
+    >
+
+      <svg
+        id="themeIcon"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+
+      </svg>
+
+    </button>
+
+    <div class="gear-wrap">
+
+      <button class="gear-btn" id="gearBtn">
+
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+        >
+
+          <circle cx="12" cy="12" r="3"/>
+
+          <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+
+        </svg>
+
+        Administração
+
+      </button>
+
+      <div class="gear-menu" id="gearMenu">
+
+        <div class="gear-label">
+          Dados
+        </div>
+
+        <a href="/upload" class="gear-item">
+
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+          >
+
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+
+            <polyline points="17 8 12 3 7 8"/>
+
+            <line x1="12" y1="3" x2="12" y2="15"/>
+
+          </svg>
+
+          Importar arquivos
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main class="main">
+
+  <div class="hero">
+
+    <div class="hero-title">
+      Selecione o <span>BI</span>
+    </div>
+
+    <p class="hero-sub">
+      Escolha abaixo qual painel deseja acessar.
+      Cada BI reflete os dados da base mais recente importada.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <a href="/controle-os" class="bi-card card-agenda">
+
+      <div class="card-top">
+
+        <div class="card-icon">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#005BAC" stroke-width="2.2">
+
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+
+            <line x1="16" y1="2" x2="16" y2="6"/>
+
+            <line x1="8" y1="2" x2="8" y2="6"/>
+
+            <line x1="3" y1="10" x2="21" y2="10"/>
+
+          </svg>
+
+        </div>
+
+        <div class="card-info">
+
+          <div class="card-name">
+            Controle de Agenda
+          </div>
+
+          <div class="card-type">
+            BI Operacional
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-desc">
+        Visão geral das O.S em controle de agenda,
+        com filtros por técnico, tipo, região e faixa de dias.
+      </div>
+
+    </a>
+
+    <a href="/agendadas" class="bi-card card-agendadas">
+
+      <div class="card-top">
+
+        <div class="card-icon">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2db86a" stroke-width="2.2">
+
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+
+            <polyline points="22 4 12 14.01 9 11.01"/>
+
+          </svg>
+
+        </div>
+
+        <div class="card-info">
+
+          <div class="card-name">
+            Agendadas
+          </div>
+
+          <div class="card-type">
+            BI Operacional
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-desc">
+        Acompanhamento das O.S com data de agendamento definida.
+      </div>
+
+    </a>
+
+    <a href="/nao-agendadas" class="bi-card card-nao-agendadas">
+
+      <div class="card-top">
+
+        <div class="card-icon">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5B400" stroke-width="2.2">
+
+            <circle cx="12" cy="12" r="10"/>
+
+            <line x1="12" y1="8" x2="12" y2="12"/>
+
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+
+          </svg>
+
+        </div>
+
+        <div class="card-info">
+
+          <div class="card-name">
+            Não Agendadas
+          </div>
+
+          <div class="card-type">
+            BI Operacional
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-desc">
+        Monitoramento das O.S pendentes sem data de agendamento.
+      </div>
+
+    </a>
+
+
+    <a href="/recred" class="bi-card card-recred">
+
+      <div class="card-top">
+
+        <div class="card-icon">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e05050" stroke-width="2.2">
+
+            <circle cx="12" cy="12" r="10"/>
+
+            <line x1="12" y1="8" x2="12" y2="12"/>
+
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+
+          </svg>
+
+        </div>
+
+        <div class="card-info">
+
+          <div class="card-name">
+            RECRED
+          </div>
+
+          <div class="card-type">
+            BI Operacional
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-desc">
+        Painel de contratos inadimplentes com cálculo de multa
+        e dias suspensos.
+      </div>
+
+    </a>
+
+    <a href="/mapa-cobertura" class="bi-card card-mapa">
+
+      <div class="card-top">
+
+        <div class="card-icon">
+
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFC72C" stroke-width="2.2">
+
+            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+
+            <line x1="8" y1="2" x2="8" y2="18"/>
+
+            <line x1="16" y1="6" x2="16" y2="22"/>
+
+          </svg>
+
+        </div>
+
+        <div class="card-info">
+
+          <div class="card-name">
+            Mapa de Cobertura
+          </div>
+
+          <div class="card-type">
+            BI Geográfico
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-desc">
+        Visualização geográfica das cidades atendidas por rota e especialista,
+        com filtros por estado, cidade, EPV e bairro.
+      </div>
+
+    </a>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+
+  A365 Ops · Central Operacional
+  &nbsp;|&nbsp;
+
+  <span id="footerDate"></span>
+
+</footer>
+
+<div id="toast"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

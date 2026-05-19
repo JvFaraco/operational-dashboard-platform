@@ -1,0 +1,4442 @@
+[
+  {
+    "cidade": "ABADIA DE GOIÁS",
+    "estado": "GOIÁS",
+    "lat": -16.757,
+    "lng": -49.441,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ABADIÂNIA",
+    "estado": "GOIÁS",
+    "lat": -16.197,
+    "lng": -48.706,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ABELARDO LUZ",
+    "estado": "SANTA CATARINA",
+    "lat": -26.571,
+    "lng": -52.322,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ADOLFO",
+    "estado": "SÃO PAULO",
+    "lat": -21.232,
+    "lng": -49.638,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ALFREDO WAGNER",
+    "estado": "SANTA CATARINA",
+    "lat": -27.697,
+    "lng": -49.338,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ALMIRANTE TAMANDARÉ",
+    "estado": "PARANÁ",
+    "lat": -25.323,
+    "lng": -49.301,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ALVORADA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.99,
+    "lng": -51.08,
+    "rotas": [
+      "A365 PAE - ROTA 03"
+    ],
+    "epvs": [
+      "Victor Ferraro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ANDRADINA",
+    "estado": "SÃO PAULO",
+    "lat": -20.897,
+    "lng": -51.38,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ANTÔNIO CARLOS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.569,
+    "lng": -48.752,
+    "rotas": [
+      "A365 SOO - ROTA 08"
+    ],
+    "epvs": [
+      "Ygor Da Costa Ferreira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ANÁPOLIS",
+    "estado": "GOIÁS",
+    "lat": -16.328,
+    "lng": -48.953,
+    "rotas": [
+      "A365 GNA - ROTA 01"
+    ],
+    "epvs": [
+      "Abinadabe Nascimento Piaui"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "APARECIDA DE GOIÂNIA",
+    "estado": "GOIÁS",
+    "lat": -16.823,
+    "lng": -49.244,
+    "rotas": [
+      "A365 GNA - ROTA 01"
+    ],
+    "epvs": [
+      "Abinadabe Nascimento Piaui"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "APIÚNA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.035,
+    "lng": -49.39,
+    "rotas": [
+      "A365 BNU - ROTA 02"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ARARANGUÁ",
+    "estado": "SANTA CATARINA",
+    "lat": -28.935,
+    "lng": -49.487,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ARARAQUARA",
+    "estado": "SÃO PAULO",
+    "lat": -21.794,
+    "lng": -48.176,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ARARAS",
+    "estado": "SÃO PAULO",
+    "lat": -22.357,
+    "lng": -47.385,
+    "rotas": [
+      "A365 CAS - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ARAÇATUBA",
+    "estado": "SÃO PAULO",
+    "lat": -21.209,
+    "lng": -50.433,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ARTUR NOGUEIRA",
+    "estado": "SÃO PAULO",
+    "lat": -22.572,
+    "lng": -47.172,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ATIBAIA",
+    "estado": "SÃO PAULO",
+    "lat": -23.117,
+    "lng": -46.55,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "AURIFLAMA",
+    "estado": "SÃO PAULO",
+    "lat": -20.685,
+    "lng": -50.555,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "AURORA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.305,
+    "lng": -49.638,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BADY BASSITT",
+    "estado": "SÃO PAULO",
+    "lat": -20.92,
+    "lng": -49.443,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BALNEÁRIO CAMBORIÚ",
+    "estado": "SANTA CATARINA",
+    "lat": -26.99,
+    "lng": -48.634,
+    "rotas": [
+      "A365 IAI - ROTA 02",
+      "A365 IAI - ROTA 04"
+    ],
+    "epvs": [
+      "Leonardo Carlos Batista",
+      "Renata Da Silva Souza",
+      "Thiago Silveira Alvez"
+    ],
+    "bairros": [
+      "AREIAS",
+      "ARIRIBÁ",
+      "BAIRRO AREIAS",
+      "BAIRRO CEDROS",
+      "BAIRRO RIO PEQUENO",
+      "BARRA",
+      "BARRA SUL",
+      "CEDROS",
+      "CENTRO",
+      "DA PRAIA DOS AMORES",
+      "DAS NAÇÕES",
+      "DOS MUNICÍPIOS",
+      "ESTADOS",
+      "ESTALEIRINHO",
+      "JARDIM IATE CLUBE",
+      "LARANJEIRAS",
+      "LÍDIA DUARTE",
+      "MONTE ALEGRE",
+      "MUNICÍPIOS",
+      "NAÇÕES",
+      "NOVA ESPERANÇA",
+      "PIONEIROS",
+      "PRAIA DO ESTALEIRINHO",
+      "PRAIA DO ESTALEIRO",
+      "PRAIA DOS AMORES",
+      "RIO PEQUENO",
+      "SANTA REGINA",
+      "SÃO FRANCISCO DE ASSIS",
+      "TABULEIRO",
+      "TAQUARAS",
+      "VILA REAL",
+      "VÁRZEA DO RANCHINHO"
+    ]
+  },
+  {
+    "cidade": "BALNEÁRIO PIÇARRAS",
+    "estado": "SANTA CATARINA",
+    "lat": -26.764,
+    "lng": -48.672,
+    "rotas": [
+      "A365 IAI - ROTA 03"
+    ],
+    "epvs": [
+      "Pedro Afonso Vidal de Carvalho"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BALNEÁRIO RINCÃO",
+    "estado": "SANTA CATARINA",
+    "lat": -28.83,
+    "lng": -49.236,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BARBOSA",
+    "estado": "SÃO PAULO",
+    "lat": -21.234,
+    "lng": -50.142,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BARRA DO RIBEIRO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.292,
+    "lng": -51.302,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BARRA VELHA",
+    "estado": "SANTA CATARINA",
+    "lat": -26.638,
+    "lng": -48.686,
+    "rotas": [
+      "A365 IAI - ROTA 03"
+    ],
+    "epvs": [
+      "Pedro Afonso Vidal de Carvalho"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BARRETOS",
+    "estado": "SÃO PAULO",
+    "lat": -20.557,
+    "lng": -48.567,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BARUERI",
+    "estado": "SÃO PAULO",
+    "lat": -23.511,
+    "lng": -46.876,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BAURU",
+    "estado": "SÃO PAULO",
+    "lat": -22.315,
+    "lng": -49.072,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BEBEDOURO",
+    "estado": "SÃO PAULO",
+    "lat": -20.949,
+    "lng": -48.479,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BIGUAÇU",
+    "estado": "SANTA CATARINA",
+    "lat": -27.494,
+    "lng": -48.655,
+    "rotas": [
+      "A365 SOO - ROTA 08"
+    ],
+    "epvs": [
+      "Ygor Da Costa Ferreira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BIRIGUI",
+    "estado": "SÃO PAULO",
+    "lat": -21.288,
+    "lng": -50.34,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BOA ESPERANÇA DO SUL",
+    "estado": "SÃO PAULO",
+    "lat": -21.993,
+    "lng": -48.392,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BOITUVA",
+    "estado": "SÃO PAULO",
+    "lat": -23.301,
+    "lng": -47.672,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "BOM RETIRO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.796,
+    "lng": -49.489,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BOMBINHAS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.141,
+    "lng": -48.514,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "BORBOREMA",
+    "estado": "SÃO PAULO",
+    "lat": -21.61,
+    "lng": -49.075,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "BOTUVERÁ",
+    "estado": "SANTA CATARINA",
+    "lat": -27.231,
+    "lng": -49.074,
+    "rotas": [
+      "A365 BQE - ROTA 01"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BRASÍLIA",
+    "estado": "DISTRITO FEDERAL",
+    "lat": -15.779,
+    "lng": -47.93,
+    "rotas": [
+      "A365 BSB - ROTA 01"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "BRODOWSKI",
+    "estado": "SÃO PAULO",
+    "lat": -20.987,
+    "lng": -47.657,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CACHOEIRINHA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.951,
+    "lng": -51.093,
+    "rotas": [
+      "A365 PAE - ROTA 01"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "SÃO GERALDO"
+    ]
+  },
+  {
+    "cidade": "CAJAMAR",
+    "estado": "SÃO PAULO",
+    "lat": -23.358,
+    "lng": -46.877,
+    "rotas": [
+      "A365 JND - ROTA 01"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CALDAS NOVAS",
+    "estado": "GOIÁS",
+    "lat": -17.744,
+    "lng": -48.625,
+    "rotas": [
+      "A365 GNA - ROTA 03"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMBÉ",
+    "estado": "PARANÁ",
+    "lat": -23.275,
+    "lng": -51.278,
+    "rotas": [
+      "A365 CTA - ROTA NORTE"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMPINA GRANDE DO SUL",
+    "estado": "PARANÁ",
+    "lat": -25.307,
+    "lng": -49.054,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMPO ALEGRE",
+    "estado": "SANTA CATARINA",
+    "lat": -26.196,
+    "lng": -49.265,
+    "rotas": [
+      "A365 JLE - ROTA 01"
+    ],
+    "epvs": [
+      "Guilherme Nunes Pereira"
+    ],
+    "bairros": [
+      "AMÉRICA",
+      "AVENTUREIRO",
+      "BOM RETIRO",
+      "CENTRO",
+      "CENTRO (PIRABEIRABA)",
+      "COMASA",
+      "COSTA E SILVA",
+      "ESPINHEIROS",
+      "IRIRIU",
+      "JARDIM IRIRIÚ",
+      "JARDIM PARAÍSO",
+      "JARDIM SOFIA",
+      "PIRABEIRABA",
+      "PIRABEIRABA (PIRABEIRABA)",
+      "RIO BONITO",
+      "RIO BONITO (PIRABEIRABA)",
+      "RIO BONITO (PIRABERABA)",
+      "SAGUAÇU",
+      "SANTO ANTÔNIO",
+      "VILA CUBATÃO",
+      "VILA NOVA",
+      "ZONA INDUSTRIAL NORTE"
+    ]
+  },
+  {
+    "cidade": "CAMPO BOM",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.677,
+    "lng": -51.062,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "CAMPO LARGO",
+    "estado": "PARANÁ",
+    "lat": -25.459,
+    "lng": -49.527,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMPO LIMPO DE GOIÁS",
+    "estado": "GOIÁS",
+    "lat": -16.257,
+    "lng": -49.114,
+    "rotas": [
+      "A365 GNA - ROTA 01"
+    ],
+    "epvs": [
+      "Abinadabe Nascimento Piaui"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMPO LIMPO PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -23.204,
+    "lng": -46.787,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAMPO MAGRO",
+    "estado": "PARANÁ",
+    "lat": -25.371,
+    "lng": -49.43,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CANELINHA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.269,
+    "lng": -48.678,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "CANOAS",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.918,
+    "lng": -51.183,
+    "rotas": [
+      "A365 PAE - ROTA 01"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "SÃO GERALDO"
+    ]
+  },
+  {
+    "cidade": "CAPIVARI DE BAIXO",
+    "estado": "SANTA CATARINA",
+    "lat": -28.444,
+    "lng": -49.003,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAPÃO DA CANOA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.745,
+    "lng": -50.008,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CARAPICUÍBA",
+    "estado": "SÃO PAULO",
+    "lat": -23.522,
+    "lng": -46.835,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CASCAVEL",
+    "estado": "PARANÁ",
+    "lat": -24.957,
+    "lng": -53.459,
+    "rotas": [
+      "A365 CSC - ROTA 01"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CASTILHO",
+    "estado": "SÃO PAULO",
+    "lat": -20.868,
+    "lng": -51.49,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CATANDUVA",
+    "estado": "SÃO PAULO",
+    "lat": -21.138,
+    "lng": -48.972,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CAXIAS DO SUL",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.168,
+    "lng": -51.179,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CEDRAL",
+    "estado": "SÃO PAULO",
+    "lat": -20.902,
+    "lng": -49.274,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CERRO AZUL",
+    "estado": "PARANÁ",
+    "lat": -24.822,
+    "lng": -49.257,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CHAPECÓ",
+    "estado": "SANTA CATARINA",
+    "lat": -27.1,
+    "lng": -52.615,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CIDADE OCIDENTAL",
+    "estado": "GOIÁS",
+    "lat": -16.078,
+    "lng": -47.917,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CIDREIRA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.182,
+    "lng": -50.211,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CLARAVAL",
+    "estado": "MINAS GERAIS",
+    "lat": -20.396,
+    "lng": -47.046,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "COLOMBO",
+    "estado": "PARANÁ",
+    "lat": -25.292,
+    "lng": -49.224,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CORDILHEIRA ALTA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.023,
+    "lng": -52.681,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CORNÉLIO PROCÓPIO",
+    "estado": "PARANÁ",
+    "lat": -23.182,
+    "lng": -50.648,
+    "rotas": [
+      "A365 CTA - ROTA NORTE"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "CORREIA PINTO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.587,
+    "lng": -50.362,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "COSMORAMA",
+    "estado": "SÃO PAULO",
+    "lat": -20.478,
+    "lng": -49.799,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "COSMÓPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -22.645,
+    "lng": -47.197,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "COTIA",
+    "estado": "SÃO PAULO",
+    "lat": -23.604,
+    "lng": -46.919,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CRAVINHOS",
+    "estado": "SÃO PAULO",
+    "lat": -21.34,
+    "lng": -47.731,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CRICIÚMA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.677,
+    "lng": -49.37,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CRUZEIRO",
+    "estado": "SÃO PAULO",
+    "lat": -22.578,
+    "lng": -44.958,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "CURITIBA",
+    "estado": "PARANÁ",
+    "lat": -25.43,
+    "lng": -49.271,
+    "rotas": [
+      "A365 CTA - ROTA 02",
+      "A365 CTA - ROTA 03"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Hevertton William Lechernakoski"
+    ],
+    "bairros": [
+      "ALTO SÃO FRANCISCO",
+      "BATEL",
+      "BIGORRILHO",
+      "BOA VISTA",
+      "BOM RETIRO",
+      "CABRAL",
+      "CAJURU",
+      "CAMPINA DO SIQUEIRA",
+      "CAMPO COMPRIDO",
+      "CAPÃO DA IMBUIA",
+      "CASCATINHA",
+      "CENTRO",
+      "CENTRO CÍVICO",
+      "CIDADE INDUSTRIAL",
+      "CIDADE INDUSTRIAL DE CURITIBA",
+      "CRISTO REI",
+      "FANNY",
+      "FAZENDINHA",
+      "GUABIROTUBA",
+      "GUAÍRA",
+      "HAUER",
+      "HUGO LANGE",
+      "JARDIM BOTÂNICO",
+      "JARDIM DAS AMÉRICAS",
+      "JUVEVE",
+      "LAMENHA PEQUENA",
+      "LINDÓIA",
+      "MERCÊS",
+      "MOSSUNGUE",
+      "PAROLIN",
+      "PORTÃO",
+      "PRADO VELHO",
+      "REBOUÇAS",
+      "SANTA QUITÉRIA",
+      "SEMINÁRIO",
+      "SÃO FRANCISCO",
+      "UBERABA",
+      "UMBARÁ",
+      "VILA IZABEL",
+      "VISTA ALEGRE",
+      "ÁGUA VERDE"
+    ]
+  },
+  {
+    "cidade": "CURITIBANOS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.282,
+    "lng": -50.581,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "DIADEMA",
+    "estado": "SÃO PAULO",
+    "lat": -23.686,
+    "lng": -46.621,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "DOIS IRMÃOS",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.582,
+    "lng": -51.091,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "ELISIÁRIO",
+    "estado": "SÃO PAULO",
+    "lat": -21.187,
+    "lng": -49.371,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "EMBU DAS ARTES",
+    "estado": "SÃO PAULO",
+    "lat": -23.649,
+    "lng": -46.851,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ESTEIO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.851,
+    "lng": -51.178,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "ESTÂNCIA VELHA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.65,
+    "lng": -51.178,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "FAZENDA RIO GRANDE",
+    "estado": "PARANÁ",
+    "lat": -25.659,
+    "lng": -49.308,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "FERNANDÓPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -20.284,
+    "lng": -50.246,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "FERRAZ DE VASCONCELOS",
+    "estado": "SÃO PAULO",
+    "lat": -23.54,
+    "lng": -46.368,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "FORMOSA",
+    "estado": "GOIÁS",
+    "lat": -15.537,
+    "lng": -47.338,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "FRANCA",
+    "estado": "SÃO PAULO",
+    "lat": -20.538,
+    "lng": -47.401,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "FRANCISCO MORATO",
+    "estado": "SÃO PAULO",
+    "lat": -23.281,
+    "lng": -46.742,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "FRANCO DA ROCHA",
+    "estado": "SÃO PAULO",
+    "lat": -23.329,
+    "lng": -46.727,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GAROPABA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.025,
+    "lng": -48.622,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GASPAR",
+    "estado": "SANTA CATARINA",
+    "lat": -26.931,
+    "lng": -48.958,
+    "rotas": [
+      "A365 BNU - ROTA 01"
+    ],
+    "epvs": [
+      "Pablo Gabriel Milano Andrade",
+      "Rogerio Alves Junior"
+    ],
+    "bairros": [
+      "BOA VISTA",
+      "BOM RETIRO",
+      "CENTRO",
+      "DO SALTO",
+      "ESCOLA AGRÍCOLA",
+      "FIDÉLIS",
+      "GARCIA",
+      "GLÓRIA",
+      "ITOUPAVA SECA",
+      "JARDIM BLUMENAU",
+      "PASSO MANSO",
+      "PONTA AGUDA",
+      "PROGRESSO",
+      "SALTO",
+      "SALTO DO NORTE",
+      "SALTO NORTE",
+      "SALTO WEISSBACH",
+      "TESTO SALTO",
+      "VALPARAÍSO",
+      "VELHA",
+      "VELHA CENTRAL",
+      "VICTOR KONDER",
+      "VILA FORMOSA",
+      "VILA NOVA",
+      "VORSTADT",
+      "ÁGUA VERDE"
+    ]
+  },
+  {
+    "cidade": "GENERAL SALGADO",
+    "estado": "SÃO PAULO",
+    "lat": -20.643,
+    "lng": -50.365,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "GLORINHA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.883,
+    "lng": -50.791,
+    "rotas": [
+      "A365 PAE - ROTA 01"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "SÃO GERALDO"
+    ]
+  },
+  {
+    "cidade": "GOIANIRA",
+    "estado": "GOIÁS",
+    "lat": -16.497,
+    "lng": -49.427,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GOVERNADOR CELSO RAMOS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.317,
+    "lng": -48.559,
+    "rotas": [
+      "A365 SOO - ROTA 08"
+    ],
+    "epvs": [
+      "Ygor Da Costa Ferreira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GRAMADO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.376,
+    "lng": -50.876,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "GRAVATAÍ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.944,
+    "lng": -50.991,
+    "rotas": [
+      "A365 PAE - ROTA 01"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "SÃO GERALDO"
+    ]
+  },
+  {
+    "cidade": "GUABIRUBA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.071,
+    "lng": -48.968,
+    "rotas": [
+      "A365 BQE - ROTA 01"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUAPIAÇU",
+    "estado": "SÃO PAULO",
+    "lat": -20.785,
+    "lng": -49.223,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUAPÓ",
+    "estado": "GOIÁS",
+    "lat": -16.829,
+    "lng": -49.531,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARARAPES",
+    "estado": "SÃO PAULO",
+    "lat": -21.261,
+    "lng": -50.638,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARATINGUETÁ",
+    "estado": "SÃO PAULO",
+    "lat": -22.816,
+    "lng": -45.193,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARATUBA",
+    "estado": "PARANÁ",
+    "lat": -25.882,
+    "lng": -48.575,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARIBA",
+    "estado": "SÃO PAULO",
+    "lat": -21.362,
+    "lng": -48.229,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARULHOS",
+    "estado": "SÃO PAULO",
+    "lat": -23.453,
+    "lng": -46.533,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUARÁ",
+    "estado": "SÃO PAULO",
+    "lat": -21.673,
+    "lng": -48.026,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "GUATAMBÚ",
+    "estado": "SANTA CATARINA",
+    "lat": -27.104,
+    "lng": -52.786,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUAÍBA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.114,
+    "lng": -51.325,
+    "rotas": [
+      "A365 PAE - ROTA 03"
+    ],
+    "epvs": [
+      "Victor Ferraro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "GUAÍRA",
+    "estado": "SÃO PAULO",
+    "lat": -20.318,
+    "lng": -48.305,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "GURUPI",
+    "estado": "TOCANTINS",
+    "lat": -11.73,
+    "lng": -49.069,
+    "rotas": [
+      "A365 PMJ - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "HORTOLÂNDIA",
+    "estado": "SÃO PAULO",
+    "lat": -22.858,
+    "lng": -47.22,
+    "rotas": [
+      "A365 CAS - ROTA 01"
+    ],
+    "epvs": [
+      "Roque Gali Vieira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "IBIRÁ",
+    "estado": "SÃO PAULO",
+    "lat": -21.079,
+    "lng": -49.237,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "IBITINGA",
+    "estado": "SÃO PAULO",
+    "lat": -21.758,
+    "lng": -48.831,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "IGARAPAVA",
+    "estado": "SÃO PAULO",
+    "lat": -20.042,
+    "lng": -47.756,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "IGREJINHA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.567,
+    "lng": -50.79,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "ILHA SOLTEIRA",
+    "estado": "SÃO PAULO",
+    "lat": -20.436,
+    "lng": -51.344,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ILHOTA",
+    "estado": "SANTA CATARINA",
+    "lat": -26.899,
+    "lng": -48.828,
+    "rotas": [
+      "A365 IAI - ROTA 01",
+      "A365 ITP - ROTA 02"
+    ],
+    "epvs": [
+      "Davi Augusto Pagno Dos Santos",
+      "Thiago Silveira Alvez"
+    ],
+    "bairros": [
+      "BRILHANTE I",
+      "CAMPECHE",
+      "CANHANDUBA",
+      "ESPINHEIROS",
+      "ILHOTA",
+      "ITAIPAVA",
+      "LIMOEIRO",
+      "RIO DO MEIO",
+      "SALSEIROS",
+      "SÃO ROQUE"
+    ]
+  },
+  {
+    "cidade": "IMARUÍ",
+    "estado": "SANTA CATARINA",
+    "lat": -28.325,
+    "lng": -48.816,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "IMBITUBA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.24,
+    "lng": -48.669,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "IMBÉ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.978,
+    "lng": -50.131,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "INDAIAL",
+    "estado": "SANTA CATARINA",
+    "lat": -26.897,
+    "lng": -49.231,
+    "rotas": [
+      "A365 BNU - ROTA 02"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "INDAIATUBA",
+    "estado": "SÃO PAULO",
+    "lat": -23.09,
+    "lng": -47.219,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "INHUMAS",
+    "estado": "GOIÁS",
+    "lat": -16.358,
+    "lng": -49.494,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "IRACEMÁPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -22.583,
+    "lng": -47.518,
+    "rotas": [
+      "A365 CAS - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "IRAPUÃ",
+    "estado": "SÃO PAULO",
+    "lat": -21.27,
+    "lng": -49.456,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ITAJAÍ",
+    "estado": "SANTA CATARINA",
+    "lat": -26.908,
+    "lng": -48.661,
+    "rotas": [
+      "A365 IAI - ROTA 05",
+      "A365 IAI - ROTA 06"
+    ],
+    "epvs": [
+      "Thiago Silveira Alvez",
+      "Willian Ribeiro Medeiros"
+    ],
+    "bairros": [
+      "BALNEARIO SANTA CLARA",
+      "BARRA DO RIO",
+      "CABEÇUDAS",
+      "CENTRO",
+      "CIDADE NOVA",
+      "CORDEIROS",
+      "DOM BOSCO",
+      "FAZENDA",
+      "FAZENDINHA",
+      "KM 12",
+      "MURTA",
+      "PRAIA BRAVA",
+      "PRAIA BRAVA DE ITAJAÍ",
+      "RESSACADA",
+      "SANTA REGINA",
+      "SÃO JOÃO",
+      "SÃO JUDAS",
+      "SÃO VICENTE",
+      "VILA OPERÁRIA"
+    ]
+  },
+  {
+    "cidade": "ITAJOBI",
+    "estado": "SÃO PAULO",
+    "lat": -21.315,
+    "lng": -49.065,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ITAPEMA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.087,
+    "lng": -48.612,
+    "rotas": [
+      "A365 ITP - ROTA 02"
+    ],
+    "epvs": [
+      "Davi Augusto Pagno Dos Santos"
+    ],
+    "bairros": [
+      "ALTO DO SÃO BENTO",
+      "ALTO SÃO BENTO",
+      "ANDORINHA",
+      "CANTO DA PRAIA",
+      "CASA BRANCA",
+      "CASTELO BRANCO",
+      "CENTRO",
+      "LEOPOLDO ZARLING",
+      "MEIA PAIA",
+      "MEIA PRAIA",
+      "MORRETES",
+      "SERTÃO DO TROMBUDO",
+      "TABULEIRO DOS OLIVEIRAS",
+      "VÁRZEA"
+    ]
+  },
+  {
+    "cidade": "ITAPEVI",
+    "estado": "SÃO PAULO",
+    "lat": -23.549,
+    "lng": -46.934,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ITAPIRA",
+    "estado": "SÃO PAULO",
+    "lat": -22.436,
+    "lng": -46.82,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ITAQUAQUECETUBA",
+    "estado": "SÃO PAULO",
+    "lat": -23.487,
+    "lng": -46.349,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ITATIBA",
+    "estado": "SÃO PAULO",
+    "lat": -23.002,
+    "lng": -46.839,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ITU",
+    "estado": "SÃO PAULO",
+    "lat": -23.264,
+    "lng": -47.299,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "ITUPEVA",
+    "estado": "SÃO PAULO",
+    "lat": -23.151,
+    "lng": -47.059,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ITUVERAVA",
+    "estado": "SÃO PAULO",
+    "lat": -20.339,
+    "lng": -47.778,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "ITÁPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -21.593,
+    "lng": -48.812,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "IVOTI",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.613,
+    "lng": -51.154,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "IÇARA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.714,
+    "lng": -49.302,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JABOTICABAL",
+    "estado": "SÃO PAULO",
+    "lat": -21.255,
+    "lng": -48.323,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JACI",
+    "estado": "SÃO PAULO",
+    "lat": -20.968,
+    "lng": -49.611,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JAGUARIÚNA",
+    "estado": "SÃO PAULO",
+    "lat": -22.703,
+    "lng": -46.985,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JAGUARUNA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.613,
+    "lng": -49.024,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JALES",
+    "estado": "SÃO PAULO",
+    "lat": -20.269,
+    "lng": -50.546,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "JANDIRA",
+    "estado": "SÃO PAULO",
+    "lat": -23.525,
+    "lng": -46.903,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JARDINÓPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -21.017,
+    "lng": -47.768,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JAÚ",
+    "estado": "SÃO PAULO",
+    "lat": -22.296,
+    "lng": -48.559,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "JOAÇABA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.176,
+    "lng": -51.504,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JOSÉ BONIFÁCIO",
+    "estado": "SÃO PAULO",
+    "lat": -21.055,
+    "lng": -49.688,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "JUNDIAÍ",
+    "estado": "SÃO PAULO",
+    "lat": -23.186,
+    "lng": -46.884,
+    "rotas": [
+      "A365 JLE - ROTA 02"
+    ],
+    "epvs": [
+      "Douglas Leandro Vital dos Santos",
+      "Guilherme Nunes Pereira"
+    ],
+    "bairros": [
+      "ADHEMAR GARCIA",
+      "ANITA GARIBALDI",
+      "ATIRADORES",
+      "BOA VISTA",
+      "BOEHMERWALD",
+      "BOEHMERWALDT",
+      "BUCAREIN",
+      "FLORESTA",
+      "FÁTIMA",
+      "GLÓRIA",
+      "GUANABARA",
+      "ITAUM",
+      "ITINGA",
+      "JARIVATUBA",
+      "JOÃO COSTA",
+      "MORRO DO MEIO",
+      "NOVA BRASÍLIA",
+      "PARANAGUAMIRIM",
+      "PARANAGUÁ-MIRIM",
+      "PARQUE GUARANÍ",
+      "PETRÓPOLIS",
+      "PROFIPO",
+      "SANTA CATARINA",
+      "SÃO MARCOS",
+      "ULYSSES GUIMARÃES"
+    ]
+  },
+  {
+    "cidade": "LAGES",
+    "estado": "SANTA CATARINA",
+    "lat": -27.816,
+    "lng": -50.326,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LAGUNA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.481,
+    "lng": -48.781,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LIMEIRA",
+    "estado": "SÃO PAULO",
+    "lat": -22.564,
+    "lng": -47.402,
+    "rotas": [
+      "A365 CAS - ROTA 01"
+    ],
+    "epvs": [
+      "Roque Gali Vieira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LINDOLFO COLLOR",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.608,
+    "lng": -51.225,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "LINS",
+    "estado": "SÃO PAULO",
+    "lat": -21.681,
+    "lng": -49.744,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "LONDRINA",
+    "estado": "PARANÁ",
+    "lat": -23.31,
+    "lng": -51.163,
+    "rotas": [
+      "A365 CTA - ROTA NORTE"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "LOUVEIRA",
+    "estado": "SÃO PAULO",
+    "lat": -23.086,
+    "lng": -46.949,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LUIZ ALVES",
+    "estado": "SANTA CATARINA",
+    "lat": -26.718,
+    "lng": -48.926,
+    "rotas": [
+      "A365 IAI - ROTA 03"
+    ],
+    "epvs": [
+      "Pedro Afonso Vidal de Carvalho"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LUZIÂNIA",
+    "estado": "GOIÁS",
+    "lat": -16.252,
+    "lng": -47.95,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "LUÍS ANTÔNIO",
+    "estado": "SÃO PAULO",
+    "lat": -21.554,
+    "lng": -47.706,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MAFRA",
+    "estado": "SANTA CATARINA",
+    "lat": -26.11,
+    "lng": -49.797,
+    "rotas": [
+      "A365 JGS - ROTA 01"
+    ],
+    "epvs": [
+      "Maikon Barbosa Leite"
+    ],
+    "bairros": [
+      "AMIZADE",
+      "AVAÍ",
+      "BANANAL DO SUL",
+      "BARRA DO RIO CERRO",
+      "BARRA DO RIO MOLHA",
+      "BARRO BRANCO",
+      "BEIRA RIO",
+      "BELA VISTA",
+      "CAIXA D'ÁGUA",
+      "CAMPO D'ÁGUA VERDE",
+      "CENTENÁRIO",
+      "CENTRO",
+      "CENTRO I BAIXADA",
+      "CENTRO NORTE",
+      "CHICO DE PAULO",
+      "CHICO PAULA",
+      "CORTICEIRA",
+      "CRUZEIRO",
+      "CZERNIEWICZ",
+      "ESCOLINHA",
+      "ESTRADA NOVA",
+      "FIGUEIRINHA",
+      "GUAMIRANGA",
+      "ILHA DA FIGUEIRA",
+      "IMIGRANTES",
+      "INDUSTRIAL NORTE",
+      "INDUSTRIAL SUL",
+      "JARAGUÁ 84",
+      "JARAGUÁ 99",
+      "JARAGUÁ ESQUERDO",
+      "JOÃO PESSOA",
+      "JOÃO TOZINI",
+      "NEREU RAMOS",
+      "NOVA BRASÍLIA",
+      "NOVA ESPERANÇA",
+      "RAU",
+      "RECANTO FELIZ",
+      "RIBEIRÃO DO CAVALO",
+      "RIO BRANCO",
+      "RIO DA LUZ",
+      "RIO NEGRO",
+      "SANTO ANTÔNIO",
+      "SEMINÁRIO",
+      "SÃO LUÍS",
+      "SÃO RAFAEL",
+      "TIFA MARTINS",
+      "TRÊS RIOS DO NORTE",
+      "TRÊS RIOS DO SUL",
+      "VIEIRA",
+      "VILA BAEPENDI",
+      "VILA LALAU",
+      "VILA LENZI",
+      "VILA NOVA",
+      "ÁGUA VERDE",
+      "ÁREA RURAL DE RIO NEGRINHO"
+    ]
+  },
+  {
+    "cidade": "MANDIRITUBA",
+    "estado": "PARANÁ",
+    "lat": -25.779,
+    "lng": -49.328,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MARAPOAMA",
+    "estado": "SÃO PAULO",
+    "lat": -21.307,
+    "lng": -49.216,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "MARINGÁ",
+    "estado": "PARANÁ",
+    "lat": -23.425,
+    "lng": -51.939,
+    "rotas": [
+      "A365 CTA - ROTA NORTE"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "MATINHOS",
+    "estado": "PARANÁ",
+    "lat": -25.818,
+    "lng": -48.542,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MATÃO",
+    "estado": "SÃO PAULO",
+    "lat": -21.604,
+    "lng": -48.366,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MAUÁ",
+    "estado": "SÃO PAULO",
+    "lat": -23.668,
+    "lng": -46.462,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MIRANDÓPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -21.134,
+    "lng": -51.103,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "MIRANORTE",
+    "estado": "TOCANTINS",
+    "lat": -9.528,
+    "lng": -48.594,
+    "rotas": [
+      "A365 PMJ - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "MIRASSOL",
+    "estado": "SÃO PAULO",
+    "lat": -20.82,
+    "lng": -49.52,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MOCOCA",
+    "estado": "SÃO PAULO",
+    "lat": -21.474,
+    "lng": -47.001,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "MOGI GUAÇU",
+    "estado": "SÃO PAULO",
+    "lat": -22.372,
+    "lng": -46.942,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MOGI MIRIM",
+    "estado": "SÃO PAULO",
+    "lat": -22.432,
+    "lng": -46.957,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MONTE ALTO",
+    "estado": "SÃO PAULO",
+    "lat": -21.26,
+    "lng": -48.498,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MONTE APRAZÍVEL",
+    "estado": "SÃO PAULO",
+    "lat": -20.775,
+    "lng": -49.714,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MONTE AZUL PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -20.906,
+    "lng": -48.641,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MONTE MOR",
+    "estado": "SÃO PAULO",
+    "lat": -22.948,
+    "lng": -47.315,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "MONTENEGRO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.689,
+    "lng": -51.461,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "MORRO AGUDO",
+    "estado": "SÃO PAULO",
+    "lat": -20.737,
+    "lng": -48.058,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MORRO DA FUMAÇA",
+    "estado": "SANTA CATARINA",
+    "lat": -28.659,
+    "lng": -49.213,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "MORUNGABA",
+    "estado": "SÃO PAULO",
+    "lat": -22.878,
+    "lng": -46.787,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NAVEGANTES",
+    "estado": "SANTA CATARINA",
+    "lat": -26.898,
+    "lng": -48.654,
+    "rotas": [
+      "A365 IAI - ROTA 03"
+    ],
+    "epvs": [
+      "Pedro Afonso Vidal de Carvalho"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NAZÁRIO",
+    "estado": "GOIÁS",
+    "lat": -16.573,
+    "lng": -49.881,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NEVES PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -20.843,
+    "lng": -49.634,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NIPOÃ",
+    "estado": "SÃO PAULO",
+    "lat": -20.954,
+    "lng": -49.799,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA ALIANÇA",
+    "estado": "SÃO PAULO",
+    "lat": -21.015,
+    "lng": -49.489,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA ERECHIM",
+    "estado": "SANTA CATARINA",
+    "lat": -26.9,
+    "lng": -52.904,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA GRANADA",
+    "estado": "SÃO PAULO",
+    "lat": -20.532,
+    "lng": -49.314,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA ODESSA",
+    "estado": "SÃO PAULO",
+    "lat": -22.781,
+    "lng": -47.294,
+    "rotas": [
+      "A365 CAS - ROTA 04"
+    ],
+    "epvs": [
+      "Thayrone Said Silva"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA SANTA RITA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.847,
+    "lng": -51.281,
+    "rotas": [
+      "A365 PAE - ROTA 04"
+    ],
+    "epvs": [
+      "Marlon De Paula"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVA TRENTO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.281,
+    "lng": -48.928,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "NOVO GAMA",
+    "estado": "GOIÁS",
+    "lat": -16.062,
+    "lng": -48.042,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "NOVO HAMBURGO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.678,
+    "lng": -51.131,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "NOVO HORIZONTE",
+    "estado": "SÃO PAULO",
+    "lat": -21.468,
+    "lng": -49.218,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "OLÍMPIA",
+    "estado": "SÃO PAULO",
+    "lat": -20.738,
+    "lng": -48.911,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ORLÂNDIA",
+    "estado": "SÃO PAULO",
+    "lat": -20.722,
+    "lng": -47.889,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "OSASCO",
+    "estado": "SÃO PAULO",
+    "lat": -23.533,
+    "lng": -46.792,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "OSÓRIO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.888,
+    "lng": -50.27,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "OTACÍLIO COSTA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.48,
+    "lng": -50.126,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PALMARES DO SUL",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.257,
+    "lng": -50.514,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PALMARES PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -21.082,
+    "lng": -48.808,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PALMAS",
+    "estado": "TOCANTINS",
+    "lat": -10.184,
+    "lng": -48.334,
+    "rotas": [
+      "A365 PMJ - ROTA 01"
+    ],
+    "epvs": [
+      "Claudio Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PALMEIRA D'OESTE",
+    "estado": "SÃO PAULO",
+    "lat": -20.414,
+    "lng": -50.742,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PARANAGUÁ",
+    "estado": "PARANÁ",
+    "lat": -25.52,
+    "lng": -48.508,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PAROBÉ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.623,
+    "lng": -50.834,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "PASSO DE TORRES",
+    "estado": "SANTA CATARINA",
+    "lat": -29.443,
+    "lng": -49.712,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PAULO LOPES",
+    "estado": "SANTA CATARINA",
+    "lat": -27.949,
+    "lng": -48.676,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PAULÍNIA",
+    "estado": "SÃO PAULO",
+    "lat": -22.761,
+    "lng": -47.153,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PEDREIRA",
+    "estado": "SÃO PAULO",
+    "lat": -22.741,
+    "lng": -46.901,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PENHA",
+    "estado": "SANTA CATARINA",
+    "lat": -26.772,
+    "lng": -48.645,
+    "rotas": [
+      "A365 IAI - ROTA 03"
+    ],
+    "epvs": [
+      "Pedro Afonso Vidal de Carvalho"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PENÁPOLIS",
+    "estado": "SÃO PAULO",
+    "lat": -21.419,
+    "lng": -50.078,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PEREIRA BARRETO",
+    "estado": "SÃO PAULO",
+    "lat": -20.638,
+    "lng": -51.108,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PETRÓPOLIS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.618,
+    "lng": -49.007,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PINHAIS",
+    "estado": "PARANÁ",
+    "lat": -25.443,
+    "lng": -49.193,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PINHALZINHO",
+    "estado": "SANTA CATARINA",
+    "lat": -26.852,
+    "lng": -52.985,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PIRACICABA",
+    "estado": "SÃO PAULO",
+    "lat": -22.728,
+    "lng": -47.649,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "PIRAJUÍ",
+    "estado": "SÃO PAULO",
+    "lat": -21.999,
+    "lng": -49.458,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PIRAPORA DO BOM JESUS",
+    "estado": "SÃO PAULO",
+    "lat": -23.397,
+    "lng": -47.006,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PIRAQUARA",
+    "estado": "PARANÁ",
+    "lat": -25.443,
+    "lng": -49.063,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PIRES DO RIO",
+    "estado": "GOIÁS",
+    "lat": -17.3,
+    "lng": -48.283,
+    "rotas": [
+      "A365 GNA - ROTA 03"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "PITANGUEIRAS",
+    "estado": "SÃO PAULO",
+    "lat": -21.008,
+    "lng": -48.223,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PLANALTINA",
+    "estado": "GOIÁS",
+    "lat": -15.454,
+    "lng": -47.614,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PLANALTO",
+    "estado": "SANTA CATARINA",
+    "lat": -26.371,
+    "lng": -52.789,
+    "rotas": [
+      "A365 BQE - ROTA 01"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "POMERODE",
+    "estado": "SANTA CATARINA",
+    "lat": -26.741,
+    "lng": -49.178,
+    "rotas": [
+      "A365 BNU - ROTA 02"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PONTAL",
+    "estado": "SÃO PAULO",
+    "lat": -21.022,
+    "lng": -48.036,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PORTO BELO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.16,
+    "lng": -48.546,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "PORTO NACIONAL",
+    "estado": "TOCANTINS",
+    "lat": -10.708,
+    "lng": -48.416,
+    "rotas": [
+      "A365 PMJ - ROTA 01"
+    ],
+    "epvs": [
+      "Claudio Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "PORTÃO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.702,
+    "lng": -51.242,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "POTIRENDABA",
+    "estado": "SÃO PAULO",
+    "lat": -21.042,
+    "lng": -49.378,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "POUSO REDONDO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.261,
+    "lng": -49.953,
+    "rotas": [
+      "A365 BNU - ROTA 02"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "QUATRO BARRAS",
+    "estado": "PARANÁ",
+    "lat": -25.369,
+    "lng": -49.073,
+    "rotas": [
+      "A365 CTA - ROTA 04"
+    ],
+    "epvs": [
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "QUERENCIA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.701,
+    "lng": -51.349,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "QUIRINÓPOLIS",
+    "estado": "MATO GROSSO",
+    "lat": -18.447,
+    "lng": -50.453,
+    "rotas": [
+      "A365 CBA - ROTA 01"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "RANCHO QUEIMADO",
+    "estado": "SANTA CATARINA",
+    "lat": -27.67,
+    "lng": -49.014,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "RIBEIRÃO PRETO",
+    "estado": "SÃO PAULO",
+    "lat": -21.17,
+    "lng": -47.81,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": [
+      "CENTRO",
+      "JARDIM ANÉSIA",
+      "JARDIM BANDEIRANTES",
+      "JARDIM TRAVAGIN",
+      "PARQUE SANTA FELÍCIA JARDIM",
+      "PARQUE SÃO MANOEL",
+      "VILA INDUSTRIAL",
+      "VILA PANDOLFO"
+    ]
+  },
+  {
+    "cidade": "RIO BRANCO DO SUL",
+    "estado": "PARANÁ",
+    "lat": -25.184,
+    "lng": -49.317,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "RIO CLARO",
+    "estado": "SÃO PAULO",
+    "lat": -22.41,
+    "lng": -47.561,
+    "rotas": [
+      "A365 CAS - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "RIO VERDE",
+    "estado": "MATO GROSSO",
+    "lat": -17.797,
+    "lng": -50.924,
+    "rotas": [
+      "A365 CBA - ROTA 01"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SALES",
+    "estado": "SÃO PAULO",
+    "lat": -21.34,
+    "lng": -49.468,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SALES OLIVEIRA",
+    "estado": "SÃO PAULO",
+    "lat": -20.77,
+    "lng": -47.839,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SALTO",
+    "estado": "SÃO PAULO",
+    "lat": -23.2,
+    "lng": -47.287,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "SANTA BÁRBARA D'OESTE",
+    "estado": "SÃO PAULO",
+    "lat": -22.754,
+    "lng": -47.414,
+    "rotas": [
+      "A365 CAS - ROTA 04"
+    ],
+    "epvs": [
+      "Thayrone Said Silva"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTA CRUZ DA CONCEIÇÃO",
+    "estado": "SÃO PAULO",
+    "lat": -22.36,
+    "lng": -47.536,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTA CRUZ DO RIO PARDO",
+    "estado": "SÃO PAULO",
+    "lat": -22.899,
+    "lng": -49.633,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTA ERNESTINA",
+    "estado": "SÃO PAULO",
+    "lat": -21.464,
+    "lng": -48.389,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTA FÉ DO SUL",
+    "estado": "SÃO PAULO",
+    "lat": -20.208,
+    "lng": -50.926,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTANA DE PARNAÍBA",
+    "estado": "SÃO PAULO",
+    "lat": -23.444,
+    "lng": -46.917,
+    "rotas": [
+      "A365 JND - ROTA 01"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTO AMARO DA IMPERATRIZ",
+    "estado": "SANTA CATARINA",
+    "lat": -27.695,
+    "lng": -48.773,
+    "rotas": [
+      "A365 SOO - ROTA 04"
+    ],
+    "epvs": [
+      "Diego Platt"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTO ANDRÉ",
+    "estado": "SÃO PAULO",
+    "lat": -23.664,
+    "lng": -46.535,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTO ANTÔNIO DA PLATINA",
+    "estado": "PARANÁ",
+    "lat": -23.299,
+    "lng": -50.076,
+    "rotas": [
+      "A365 CTA - ROTA NORTE"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTO ANTÔNIO DO DESCOBERTO",
+    "estado": "GOIÁS",
+    "lat": -15.94,
+    "lng": -48.252,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SANTOS",
+    "estado": "SÃO PAULO",
+    "lat": -23.961,
+    "lng": -46.333,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SAPIRANGA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.638,
+    "lng": -51.0,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "SAPUCAIA DO SUL",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.831,
+    "lng": -51.151,
+    "rotas": [
+      "A365 PAE - ROTA 04"
+    ],
+    "epvs": [
+      "Marlon De Paula"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SEARA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.15,
+    "lng": -52.31,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SENADOR CANEDO",
+    "estado": "GOIÁS",
+    "lat": -16.706,
+    "lng": -49.091,
+    "rotas": [
+      "A365 GNA - ROTA 01"
+    ],
+    "epvs": [
+      "Abinadabe Nascimento Piaui"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SERRANA",
+    "estado": "SÃO PAULO",
+    "lat": -21.219,
+    "lng": -47.593,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SERTÃOZINHO",
+    "estado": "SÃO PAULO",
+    "lat": -21.138,
+    "lng": -47.993,
+    "rotas": [
+      "A365 RBP - ROTA 01"
+    ],
+    "epvs": [
+      "Alexandre Henrique Braz Pereira Santos"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SOROCABA",
+    "estado": "SÃO PAULO",
+    "lat": -23.502,
+    "lng": -47.458,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "SOUSAS",
+    "estado": "SÃO PAULO",
+    "lat": -22.834,
+    "lng": -46.987,
+    "rotas": [
+      "A365 CAS - ROTA 02"
+    ],
+    "epvs": [
+      "Ralpho Secco Comisso"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SUMARÉ",
+    "estado": "SÃO PAULO",
+    "lat": -22.822,
+    "lng": -47.266,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "SÃO BERNARDO DO CAMPO",
+    "estado": "SÃO PAULO",
+    "lat": -23.694,
+    "lng": -46.565,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SÃO CAETANO DO SUL",
+    "estado": "SÃO PAULO",
+    "lat": -23.622,
+    "lng": -46.552,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SÃO CARLOS",
+    "estado": "SÃO PAULO",
+    "lat": -22.018,
+    "lng": -47.891,
+    "rotas": [
+      "A365 CAS - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SÃO JOSÉ",
+    "estado": "SANTA CATARINA",
+    "lat": -27.611,
+    "lng": -48.634,
+    "rotas": [
+      "A365 SOO - ROTA 01",
+      "A365 SOO - ROTA 03",
+      "A365 SOO - ROTA 05",
+      "A365 SOO - ROTA 06",
+      "A365 SOO - ROTA 07"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa",
+      "Gilson Cristovão",
+      "Mauricio Da Silva Fraga",
+      "Mauro Roberto Nascimento Valente",
+      "Robson da Rosa"
+    ],
+    "bairros": [
+      "ABRAÃO",
+      "AGRONÔMICA",
+      "ALTO RIBEIRÃO",
+      "ALTO RIBEIRÃO LESTE",
+      "ARMAÇÃO",
+      "AUTÓDROMO",
+      "BALNEÁRIO",
+      "BARRA DA LAGOA",
+      "BARREIROS",
+      "BASE AÉREA",
+      "BELA VISTA",
+      "CACHOEIRA DO BOM JESUS",
+      "CACHOEIRA DO BOM JESUS LESTE",
+      "CACUPÉ",
+      "CAMINHO NOVO",
+      "CAMPECHE",
+      "CAMPECHE CENTRAL",
+      "CAMPECHE LESTE",
+      "CAMPINAS",
+      "CANASVIEIRAS",
+      "CANTO",
+      "CANTO DA LAGOA",
+      "CAPOEIRAS",
+      "CARIANOS",
+      "CARVOEIRA",
+      "CENIRO MARTINS",
+      "CENTRO",
+      "CENTRO EMPRESARIAL FORQUILHAS",
+      "CENTRO HISTÓRICO",
+      "CIDADE UNIVERSITÁRIA PEDRA BRANCA",
+      "COLONINHA",
+      "COLÔNIA SANTANA",
+      "COQUEIROS",
+      "COSTEIRA DO PIRAJUBAÉ",
+      "CÓRREGO GRANDE",
+      "DANIELA",
+      "DISTRITO INDUSTRIAL",
+      "ESTREITO",
+      "FAZENDA SANTO ANTÔNIO",
+      "FLOR DE NÁPOLIS",
+      "FORQUILHINHA",
+      "FORQUILHINHAS",
+      "INGLESES",
+      "INGLESES CENTRO",
+      "INGLESES DO RIO VERMELHO",
+      "INGLESES NORTE",
+      "ITACORUBI",
+      "ITAGUAÇU",
+      "JARDIM AQUARIUS",
+      "JARDIM ARAUCÁRIA",
+      "JARDIM ATLÂNTICO",
+      "JARDIM COQUEIROS",
+      "JARDIM DAS PALMEIRAS",
+      "JARDIM ELDORADO",
+      "JOSÉ MENDES",
+      "JOÃO PAULO",
+      "JURERE",
+      "JURERÊ INTERNACIONAL",
+      "KOBRASOL",
+      "LAGOA DA CONCEIÇÃO",
+      "LAGOA PEQUENA",
+      "LISBOA",
+      "MADRI",
+      "MONTE CRISTO",
+      "MONTE VERDE",
+      "MORRO DAS PEDRAS",
+      "NOSSA SENHORA DO ROSÁRIO",
+      "NOVA PALHOÇA",
+      "PACHECO",
+      "PACHECOS",
+      "PAGANI",
+      "PANTANAL",
+      "PASSA VINTE",
+      "PEDRA BRANCA",
+      "PICADAS DO SUL",
+      "PONTA DAS CANAS",
+      "PONTA DE BAIXO",
+      "PONTE DO IMARUIM",
+      "PORTO DA LAGOA",
+      "PR SANTINHO",
+      "PRAIA BRAVA",
+      "PRAIA COMPRIDA",
+      "RATONES",
+      "RIBEIRÃO DA ILHA",
+      "RIO GRANDE",
+      "RIO TAVARES",
+      "RIO TAVARES CENTRAL",
+      "RIO VERMELHO",
+      "ROÇADO",
+      "SACO DOS LIMÕES",
+      "SACO GRANDE",
+      "SAMBAQUI",
+      "SAN MARINO",
+      "SANTA MÔNICA",
+      "SANTA TERESA",
+      "SANTINHO",
+      "SANTO ANTONIO DE LISBOA",
+      "SÃO JOÃO DO RIO VERMELHO",
+      "SÃO LUIZ",
+      "SÃO SEBASTIAO",
+      "TAPERA",
+      "TAPERA DA BASE",
+      "TRINDADE",
+      "VARGEM DO BOM JESUS",
+      "VARGEM GRANDE",
+      "VARGEM PEQUENA"
+    ]
+  },
+  {
+    "cidade": "SÃO JOSÉ DO RIO PRETO",
+    "estado": "SÃO PAULO",
+    "lat": -20.82,
+    "lng": -49.379,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": [
+      "BOA VISTA",
+      "BOM JARDIM",
+      "BORBOLETA 1",
+      "BOSQUE DA FELICIDADE",
+      "CENTRO",
+      "CENTRO EMPRESARIAL COPLAN",
+      "CITY BARRETOS",
+      "COLINA AZUL",
+      "COLINA SUL",
+      "CONDOMÍNIO RESIDENCIAL PARQUE DA LIBERDADE II",
+      "CONDOMÍNIO RESIDENCIAL PARQUE DA LIBERDADE III",
+      "CONJUNTO HABITACIONAL SAO DEOCLECIANO",
+      "DISTRITO DE TALHADO",
+      "DISTRITO ENGENHEIRO SCHMITT",
+      "EGYDIO ZANI",
+      "ENGENHEIRO SCHMITT",
+      "ESTÂNCIA JOCKEY CLUBE",
+      "ESTÂNCIA SÃO JOÃO II - VILA ELMAZ",
+      "ESTÂNCIA SÃO PAULO",
+      "EUROPARK",
+      "IDEAL LIFE ECOLAZER RESIDENCE",
+      "JARDIM ALTO ALEGRE",
+      "JARDIM AMÉRICA",
+      "JARDIM ANALICE",
+      "JARDIM BELA VISTA",
+      "JARDIM BORDON",
+      "JARDIM CAPARROZ",
+      "JARDIM CONCEIÇÃO",
+      "JARDIM DO BOSQUE",
+      "JARDIM EUROPA",
+      "JARDIM ITAPEMA",
+      "JARDIM JOÃO PAULO II",
+      "JARDIM MANOEL DEL ARCO",
+      "JARDIM MARAJÓ",
+      "JARDIM MARILÚ",
+      "JARDIM NAZARETH",
+      "JARDIM NOVO AEROPORTO",
+      "JARDIM PAULISTA",
+      "JARDIM REDENTOR",
+      "JARDIM RENASCENÇA",
+      "JARDIM SANTA CATARINA",
+      "JARDIM SANTA LUZIA",
+      "JARDIM SANTA MARIA",
+      "JARDIM SEYON",
+      "JARDIM TANGARÁ",
+      "JARDIM URANO",
+      "JARDIM VIEIRA",
+      "JARDIM VISTA ALEGRE",
+      "JARDIM YOLANDA",
+      "JD DAS PALMEIRAS",
+      "LAGO SUL",
+      "LOTEAMENTO EMPRESARIAL SPOTTI",
+      "LOTEAMENTO PARQUE RESIDENCIAL DA AMIZADE",
+      "LOTEAMENTO RESIDENCIAL REGISSOL",
+      "MAISPARQUE RIO PRETO",
+      "NÚCLEO HABITACIONAL PICA-PAU AMARELO",
+      "OURO VERDE",
+      "PARQUE CELESTE",
+      "PARQUE DA LIBERDADE",
+      "PARQUE DAS AMORAS II",
+      "PARQUE DAS PERDIZES",
+      "PARQUE DOS BURITIS",
+      "PARQUE ESTORIL",
+      "PARQUE INDUSTRIAL CAMPO VERDE",
+      "PARQUE INDUSTRIAL TANCREDO NEVES",
+      "PARQUE JAGUARÉ",
+      "PARQUE RESIDENCIAL DA FRATERNIDADE",
+      "PARQUE RESIDENCIAL DA FRATERNIDADE 2",
+      "PARQUE RESIDENCIAL UNIVERSO",
+      "PARQUE SAO MIGUEL",
+      "RECANTO DUAS VENDAS",
+      "REDENTORA",
+      "RES. SETSUL II",
+      "RESIDENCIAL CIDADE JARDIM",
+      "RESIDENCIAL FIGUEIRA II",
+      "RESIDENCIAL FLÓRIDA PARK",
+      "RESIDENCIAL JARDINS",
+      "RESIDENCIAL LUZ DA ESPERANÇA",
+      "RESIDENCIAL MAIS PARQUE MIRASSOL",
+      "RESIDENCIAL MARIA JÚLIA",
+      "RESIDENCIAL MENEZES",
+      "RESIDENCIAL MONTEREY",
+      "RESIDENCIAL REGISSOL II",
+      "RESIDÊNCIAL MONTE REY",
+      "SANTA CASA",
+      "SANTOS DUMONT",
+      "SETSUL",
+      "SETVALLEY",
+      "SETVALLEY III",
+      "SÃO FRANCISCO",
+      "VILA ANCHIETA",
+      "VILA ANGÉLICA",
+      "VILA AURORA",
+      "VILA BOM JESUS",
+      "VILA CRISTINA",
+      "VILA CURTI",
+      "VILA DINIZ",
+      "VILA ELMAZ",
+      "VILA ELVIRA",
+      "VILA ERCÍLIA",
+      "VILA ESPLANADA",
+      "VILA IDEAL",
+      "VILA IPIRANGA",
+      "VILA MACENO",
+      "VILA NOSSA SENHORA DA PAZ",
+      "VILA REDENTORA",
+      "VILA SANTA CRUZ",
+      "VILA SANTA CÂNDIDA",
+      "VILA SANTO ANTÔNIO",
+      "VILA SINIBALDI",
+      "VILA SÃO JORGE",
+      "VILA SÃO JUDAS TADEU",
+      "VILA TONINHO",
+      "VILLA CASSINI"
+    ]
+  },
+  {
+    "cidade": "SÃO JOSÉ DOS PINHAIS",
+    "estado": "PARANÁ",
+    "lat": -25.531,
+    "lng": -49.208,
+    "rotas": [
+      "A365 CTA - ROTA 01"
+    ],
+    "epvs": [
+      "Carlos Eduardo Alves De Oliveira",
+      "Marcos Heleno Barbosa dos Santos",
+      "Maurício Lana de Oliveira"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "SÃO JOÃO BATISTA",
+    "estado": "SANTA CATARINA",
+    "lat": -27.277,
+    "lng": -48.848,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "SÃO JOÃO DA BOA VISTA",
+    "estado": "SÃO PAULO",
+    "lat": -21.972,
+    "lng": -46.795,
+    "rotas": [
+      "A365 CAS - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "SÃO LEOPOLDO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.76,
+    "lng": -51.148,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "SÃO PAULO",
+    "estado": "SÃO PAULO",
+    "lat": -23.55,
+    "lng": -46.634,
+    "rotas": [
+      "A365 SPO - ROTA 01"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": [
+      "CIDADE VARGAS"
+    ]
+  },
+  {
+    "cidade": "SÃO SEBASTIÃO DO CAÍ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.589,
+    "lng": -51.372,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "TABAPUÃ",
+    "estado": "SÃO PAULO",
+    "lat": -21.0,
+    "lng": -49.018,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "TABATINGA",
+    "estado": "SÃO PAULO",
+    "lat": -21.717,
+    "lng": -48.687,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "TABOÃO DA SERRA",
+    "estado": "SÃO PAULO",
+    "lat": -23.603,
+    "lng": -46.756,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TANABI",
+    "estado": "SÃO PAULO",
+    "lat": -20.625,
+    "lng": -49.659,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TAQUARA",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.651,
+    "lng": -50.779,
+    "rotas": [
+      "A365 PAE - ROTA 02"
+    ],
+    "epvs": [
+      "Luis Fernando B. Carvalho"
+    ],
+    "bairros": [
+      "CENTRO",
+      "GUARUJÁ",
+      "SÃO JOSÉ",
+      "TRISTEZA"
+    ]
+  },
+  {
+    "cidade": "TAQUARITINGA",
+    "estado": "SÃO PAULO",
+    "lat": -21.407,
+    "lng": -48.504,
+    "rotas": [
+      "A365 RBP - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "TATUÍ",
+    "estado": "SÃO PAULO",
+    "lat": -23.361,
+    "lng": -47.858,
+    "rotas": [
+      "A365 CAS - ROTA 07"
+    ],
+    "epvs": [
+      "Robson da Silva Monteiro"
+    ],
+    "bairros": [
+      "RESIDENCIAL MORADAS DE ITAICI"
+    ]
+  },
+  {
+    "cidade": "TAUBATÉ",
+    "estado": "SÃO PAULO",
+    "lat": -23.027,
+    "lng": -45.556,
+    "rotas": [
+      "A365 SPO - ROTA 02"
+    ],
+    "epvs": [
+      "Marcus Vinicius Bezerra"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TIJUCAS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.238,
+    "lng": -48.633,
+    "rotas": [
+      "A365 ITP - ROTA 01"
+    ],
+    "epvs": [
+      "Andre Luiz De Sa"
+    ],
+    "bairros": [
+      "JARDIM PRAIA MAR"
+    ]
+  },
+  {
+    "cidade": "TIMBÓ",
+    "estado": "SANTA CATARINA",
+    "lat": -26.822,
+    "lng": -49.271,
+    "rotas": [
+      "A365 BNU - ROTA 02"
+    ],
+    "epvs": [
+      "Rogerio Alves Junior"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TRAMANDAÍ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.004,
+    "lng": -50.133,
+    "rotas": [
+      "A365 PAE - ROTA 06"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "TRINDADE",
+    "estado": "GOIÁS",
+    "lat": -16.653,
+    "lng": -49.49,
+    "rotas": [
+      "A365 GNA - ROTA 02"
+    ],
+    "epvs": [
+      "Weberth Mesquita Xavier"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TRÊS FRONTEIRAS",
+    "estado": "SÃO PAULO",
+    "lat": -20.133,
+    "lng": -51.016,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "TUBARÃO",
+    "estado": "SANTA CATARINA",
+    "lat": -28.469,
+    "lng": -49.006,
+    "rotas": [
+      "A365 SOO - ROTA 02"
+    ],
+    "epvs": [
+      "David Cleiton Silva da Costa"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "TUPÃ",
+    "estado": "SÃO PAULO",
+    "lat": -21.935,
+    "lng": -50.513,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "UCHOA",
+    "estado": "SÃO PAULO",
+    "lat": -20.946,
+    "lng": -49.177,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "UNIÃO PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -21.126,
+    "lng": -49.875,
+    "rotas": [
+      "A365 SRR - ROTA 02"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "URUBICI",
+    "estado": "SANTA CATARINA",
+    "lat": -28.016,
+    "lng": -49.591,
+    "rotas": [
+      "A365 LGS - ROTA 01"
+    ],
+    "epvs": [
+      "Thiago Silva de Matias"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "URUPÊS",
+    "estado": "SÃO PAULO",
+    "lat": -21.197,
+    "lng": -49.297,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VALINHOS",
+    "estado": "SÃO PAULO",
+    "lat": -22.974,
+    "lng": -46.996,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VALPARAÍSO DE GOIÁS",
+    "estado": "GOIÁS",
+    "lat": -16.072,
+    "lng": -47.994,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VIAMÃO",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -30.081,
+    "lng": -51.023,
+    "rotas": [
+      "A365 PAE - ROTA 04"
+    ],
+    "epvs": [
+      "Marlon De Paula"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VINHEDO",
+    "estado": "SÃO PAULO",
+    "lat": -23.029,
+    "lng": -46.974,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VOTUPORANGA",
+    "estado": "SÃO PAULO",
+    "lat": -20.422,
+    "lng": -49.971,
+    "rotas": [
+      "A365 SRR - ROTA 01"
+    ],
+    "epvs": [
+      "Lucas Borges Navarro"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "VÁRZEA PAULISTA",
+    "estado": "SÃO PAULO",
+    "lat": -23.211,
+    "lng": -46.827,
+    "rotas": [
+      "A365 JND - ROTA 02"
+    ],
+    "epvs": [
+      "Vitor Jorge de Araujo Pinto"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "XANGRI-LÁ",
+    "estado": "RIO GRANDE DO SUL",
+    "lat": -29.807,
+    "lng": -50.063,
+    "rotas": [
+      "A365 PAE - ROTA 07"
+    ],
+    "epvs": [],
+    "bairros": []
+  },
+  {
+    "cidade": "XANXERÊ",
+    "estado": "SANTA CATARINA",
+    "lat": -26.876,
+    "lng": -52.404,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "XAXIM",
+    "estado": "SANTA CATARINA",
+    "lat": -26.96,
+    "lng": -52.539,
+    "rotas": [
+      "A365 CCO - ROTA 01"
+    ],
+    "epvs": [
+      "Izaque Alves De Jesus"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ÁGUAS LINDAS DE GOIÁS",
+    "estado": "GOIÁS",
+    "lat": -15.747,
+    "lng": -48.278,
+    "rotas": [
+      "A365 BSB - ROTA 02"
+    ],
+    "epvs": [
+      "Álvaro Pontes Armando"
+    ],
+    "bairros": []
+  },
+  {
+    "cidade": "ÁGUAS MORNAS",
+    "estado": "SANTA CATARINA",
+    "lat": -27.706,
+    "lng": -48.822,
+    "rotas": [
+      "A365 SOO - ROTA 04"
+    ],
+    "epvs": [
+      "Diego Platt"
+    ],
+    "bairros": []
+  }
+]
