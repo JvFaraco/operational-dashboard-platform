@@ -9,8 +9,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("A365_SECRET_KEY", "a365_secret_key_dev")
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50 MB
 # ── Configuracao ─────────────────────────────────────────────────────────────
-USERS = ["joao.faraco", "taise.mendes", "sheila.platt"]
-MASTER_PASS = os.environ.get("A365_MASTER_PASS", "admin")
+USERS = [""]
+MASTER_PASS = os.environ.get("A365_MASTER_PASS", "")
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
