@@ -6,11 +6,11 @@ import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 app = Flask(__name__)
-app.secret_key = os.environ.get("A365_SECRET_KEY", "a365_secret_key_dev")
+app.secret_key = os.environ.get("A365_SECRET_KEY")
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50 MB
 # ── Configuracao ─────────────────────────────────────────────────────────────
-USERS = [""]
-MASTER_PASS = os.environ.get("A365_MASTER_PASS", "")
+USERS = ["joao.faraco", "taise.mendes", "sheila.platt"]
+MASTER_PASS = os.environ.get("A365_MASTER_PASS")
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
