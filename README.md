@@ -4,7 +4,7 @@ Dashboard interno desenvolvido com Flask para gestão e visualização de ordens
 
 ---
 
-## 🖥️ Telas
+## Telas
 
 | Rota | Descrição |
 |------|-----------|
@@ -18,19 +18,49 @@ Dashboard interno desenvolvido com Flask para gestão e visualização de ordens
 
 ---
 
-## ⚙️ Stack
+## Stack
 
-- **Backend**: [Flask 3.0](https://flask.palletsprojects.com/) + [Waitress](https://docs.pylonsproject.org/projects/waitress/) (servidor de produção)
-- **Dados**: [pandas](https://pandas.pydata.org/) + [openpyxl](https://openpyxl.readthedocs.io/) para leitura de planilhas Excel
+- **Backend**: Flask 3.0 + Waitress (servidor de produção)
+- **Dados**: pandas + openpyxl para leitura de planilhas Excel
 - **Frontend**: HTML5 + CSS3 + JavaScript puro (sem frameworks externos)
+- **Gráficos**: Chart.js 4.x (bar, doughnut)
 - **Autenticação**: Sessão Flask com variáveis de ambiente
 
 ---
 
-## 📁 Estrutura do Projeto
+## Funcionalidades por Dashboard
+
+### Controle de OS (`/controle-os`)
+- Cards de supervisor com OS, contas ativas e % OS/conta por regional
+- KPIs: total de OS, contas ativas, % OS/conta, +14 dias, técnicos ativos
+- Faixas de dias: 0-2 / 3-14 / +14 (click-to-filter no gráfico e nas pills)
+- Gráfico de tipo de OS (doughnut) com legenda interativa
+- Barras horizontais de OS por regional com % OS/conta
+- Ranking de técnicos EPV com filtro por especialista
+- Filtros: supervisor, região, cidade, motivo, tipo de OS
+- Badge de atualização da base (atualizado hoje / X dias)
+- Sidebar retrátil
+
+### RECRED — Inadimplência (`/recred`)
+- Cards de supervisor com OS, contas, % e exposição contratual
+- KPIs: total, contas ativas, % OS/conta, +14 dias, pausadas, exposição, média dias suspenso
+- Faixas de dias: 0-2 / 3-14 / +14 (click-to-filter)
+- Gráfico de exposição por regional com click-to-filter
+- Ranking de técnicos com exposição contratual
+- Filtros: supervisor, regional, faixa de dias, status de pausa
+- Exportação CSV filtrado
+
+### Base Compartilhada (Contas x EPV)
+- Upload único via `/upload` alimenta todos os dashboards simultaneamente
+- Armazenada em `data/base.xlsx`, cache invalidado a cada upload
+- Consumida via `/api/base` com dados de contas ativas por técnico/sigla
+
+---
+
+## Estrutura do Projeto
 
 ```
-a365ops/
+operational-dashboard-platform/
 ├── app.py                  # Aplicação principal Flask
 ├── requirements.txt        # Dependências Python
 ├── data/                   # Planilhas e metadados (não versionado)
@@ -44,20 +74,25 @@ a365ops/
 │   ├── agendadas.html
 │   ├── nao_agendadas.html
 │   └── recred.html
-└── static/
-    ├── css/                # Estilos por página
-    └── js/                 # Scripts por página
+├── static/
+│   ├── css/                # Estilos por página
+│   └── js/                 # Scripts por página
+└── .claude/                # Contexto e skills para Claude Code
+    ├── CLAUDE.md
+    └── skills/
+        ├── add-dashboard.md
+        └── inspect-js/
 ```
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/a365ops.git
-cd a365ops
+git clone https://github.com/JvFaraco/operational-dashboard-platform.git
+cd operational-dashboard-platform
 ```
 
 ### 2. Crie e ative o ambiente virtual
@@ -80,17 +115,14 @@ pip install -r requirements.txt
 
 ### 4. Configure as variáveis de ambiente
 
-Crie um arquivo `.env` ou exporte as variáveis no terminal:
+Crie um arquivo `.env` ou exporte no terminal:
 
 ```bash
-# Chave secreta da sessão Flask
 export A365_SECRET_KEY="sua_chave_secreta_aqui"
-
-# Senha master de acesso ao sistema
 export A365_MASTER_PASS="sua_senha_aqui"
 ```
 
-> ⚠️ **Nunca** suba os valores reais dessas variáveis para o repositório.
+> Nunca suba os valores reais dessas variáveis para o repositório.
 
 ### 5. Adicione as planilhas de dados
 
@@ -100,7 +132,8 @@ Coloque os arquivos `.xlsx` na pasta `data/`:
 data/
 ├── bios.xlsx           # Base de Controle de OS
 ├── agendadas.xlsx      # OS Agendadas
-└── nao_agendadas.xlsx  # OS Não Agendadas
+├── nao_agendadas.xlsx  # OS Não Agendadas
+└── base.xlsx           # Contas x EPV (base compartilhada)
 ```
 
 ### 6. Inicie o servidor
@@ -109,71 +142,31 @@ data/
 python app.py
 ```
 
-O sistema estará disponível em:
+Disponível em:
 
 ```
 Local:  http://localhost:5000
 Rede:   http://<ip-da-maquina>:5000
-DNS:    http://a365ops:5000
 ```
 
 ---
 
-## 🔐 Autenticação
-
-O acesso ao upload e às funções protegidas exige login. Os usuários autorizados são definidos diretamente no código (`USERS`). A senha é única (master password) e configurada via variável de ambiente `A365_MASTER_PASS`.
-
----
-
-## 📊 APIs Internas
-
-O sistema expõe endpoints JSON consumidos pelo frontend:
+## APIs Internas
 
 | Endpoint | Método | Descrição |
 |----------|--------|-----------|
 | `/api/controle-os` | GET | Dados da base `bios.xlsx` |
 | `/api/agendadas` | GET | Dados da base `agendadas.xlsx` |
 | `/api/nao-agendadas` | GET | Dados da base `nao_agendadas.xlsx` |
-| `/api/meta` | GET | Metadados das 3 bases |
-| `/api/recred` | GET | Registros de inadimplência com cálculo de multa e dias suspensos |
+| `/api/recred` | GET | Registros de inadimplência |
+| `/api/base` | GET | Contas x EPV (base compartilhada) |
+| `/api/meta/<tipo>` | GET | Metadados e data de atualização de cada base |
 
 ---
 
-## 📋 Requisitos
+## Autenticação
 
-```
-flask==3.0.3
-pandas==2.2.2
-numpy==1.26.4
-openpyxl==3.1.2
-waitress==3.0.0
-```
-
----
-
-## .gitignore recomendado
-
-```gitignore
-# Dados sensíveis / operacionais
-data/*.xlsx
-data/*.json
-
-# Manter a pasta data no repositório
-!data/.gitkeep
-
-# Cache Python
-__pycache__/
-*.pyc
-*.pyo
-
-# Ambiente virtual
-venv/
-.env
-
-# Arquivos de sistema
-.DS_Store
-Thumbs.db
-```
+Acesso ao upload e funções protegidas exige login. A senha é única (master password) configurada via variável de ambiente `A365_MASTER_PASS`.
 
 ---
 
