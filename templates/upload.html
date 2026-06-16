@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% block title %}A365 Ops - Upload{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<header class="header">
+
+    <a href="{{ url_for('home') }}" class="logo-link">
+    <div class="logo-name">A365 Ops</div>
+    <div class="logo-tag">
+      Central Operacional
+    </div>
+    </a>
+
+  <div style="display:flex;align-items:center;gap:12px;">
+
+    <a href="/" class="nav-back">
+
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+
+        <polyline points="15 18 9 12 15 6"/>
+
+      </svg>
+
+      Voltar ao BI
+
+    </a>
+
+    <span class="hbadge">
+      Upload
+    </span>
+
+  </div>
+
+</header>
+
+<main class="main">
+
+  <div class="card">
+
+    <div class="card-title">
+      Atualizar base de dados
+    </div>
+
+    <div class="card-sub">
+
+      Selecione o tipo de base e importe o XLSX correspondente.
+      Os dados ficam disponíveis para todo o time imediatamente após o upload.
+
+    </div>
+
+    <div class="meta" id="metaBox">
+
+      <span class="meta-none">
+        Nenhum dado carregado ainda.
+      </span>
+
+    </div>
+
+    <div class="meta" id="metaBaseBox" style="margin-top:-8px">
+
+      <span><strong>Base compartilhada (Contas x EPV):</strong></span>
+
+      <span class="meta-none" id="metaBaseInfo">
+        Sem dados carregados ainda.
+      </span>
+
+    </div>
+
+    <div class="meta" style="margin-top:-8px">
+
+      <span>
+        <strong>Tipo de base</strong>
+      </span>
+
+      <div
+        style="
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        margin-top:8px
+        "
+      >
+
+        <label style="display:flex;align-items:center;gap:6px">
+
+          <input
+            type="radio"
+            name="baseType"
+            value="bios"
+            checked
+          >
+
+          Controle de Agenda + RECRED
+
+        </label>
+
+        <label style="display:flex;align-items:center;gap:6px">
+
+          <input
+            type="radio"
+            name="baseType"
+            value="agendadas"
+          >
+
+          Agendadas
+
+        </label>
+
+        <label style="display:flex;align-items:center;gap:6px">
+
+          <input
+            type="radio"
+            name="baseType"
+            value="nao_agendadas"
+          >
+
+          Não agendadas
+
+        </label>
+
+      </div>
+
+      <hr style="margin:14px 0;border:none;border-top:1px solid var(--border2);">
+
+      <span style="font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.8px;">
+        Base compartilhada
+      </span>
+
+      <div
+        style="
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        margin-top:8px
+        "
+      >
+
+        <label style="display:flex;align-items:center;gap:6px">
+
+          <input
+            type="radio"
+            name="baseType"
+            value="base"
+          >
+
+          Contas x EPV (todos os dashboards)
+
+        </label>
+
+      </div>
+
+    </div>
+
+    <div class="dropzone" id="dropzone">
+
+      <input
+        type="file"
+        id="fileInput"
+        accept=".xlsx,.xls"
+      >
+
+      <div class="dz-icon">
+
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+
+          <polyline points="17 8 12 3 7 8"/>
+
+          <line x1="12" y1="3" x2="12" y2="15"/>
+
+        </svg>
+
+      </div>
+
+      <div class="dz-label">
+        Arraste o arquivo aqui ou clique para selecionar
+      </div>
+
+      <div class="dz-hint">
+        Aceita .xlsx e .xls
+      </div>
+
+      <div class="dz-file" id="dzFile">
+
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+
+          <polyline points="14 2 14 8 20 8"/>
+
+        </svg>
+
+        <span id="dzFileName"></span>
+
+      </div>
+
+    </div>
+
+    <button class="btn-up" id="btnUp" disabled>
+
+      <svg
+        width="15"
+        height="15"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+
+        <polyline points="17 8 12 3 7 8"/>
+
+        <line x1="12" y1="3" x2="12" y2="15"/>
+
+      </svg>
+
+      Enviar e atualizar dados
+
+    </button>
+
+    <div class="prog-wrap" id="progWrap">
+
+      <div class="prog-bar">
+
+        <div class="prog-fill" id="progFill"></div>
+
+      </div>
+
+      <div class="prog-label" id="progLabel">
+        Enviando...
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<div id="toast"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+{% endblock %}

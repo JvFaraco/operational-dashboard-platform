@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    {% block title %}A365 Ops{% endblock %}
+  </title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/global.css') }}">
+
+  {% block styles %}{% endblock %}
+
+</head>
+
+<body>
+
+  {% block content %}{% endblock %}
+
+  <!-- Assistente IA — aparece em todas as páginas -->
+  <a href="https://m365.cloud.microsoft/chat/?titleId=T_12daeb08-4543-2883-dbeb-4a7916b46e31&source=embedded-builder" target="_blank" id="aiBtn" title="Assistente IA A365" aria-label="Abrir Assistente IA">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    <span class="ai-label">Assistente IA</span>
+    <span class="ai-ping"></span>
+  </a>
+
+  <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Dados sensíveis - nunca subir
+data/*.xlsx
+data/*.csv
+data/*.xls
+data/*.json
+
+# Manter a pasta data no repo (vazia)
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
