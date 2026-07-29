@@ -1,21 +1,42 @@
-# Dados sensíveis - nunca subir
-data/*.xlsx
-data/*.csv
-data/*.xls
-data/*.json
-
-# Manter a pasta data no repo (vazia)
+# Operational and sensitive data
+data/*
 !data/.gitkeep
+*.xlsx
+*.xls
+*.csv
+*.sqlite
+*.sqlite3
+*.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
 
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
-.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 venv/
 env/
 .venv/
 
-# Sistema
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and operating system
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
