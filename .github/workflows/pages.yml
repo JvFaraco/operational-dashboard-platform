@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "docs/**"
+      - "static/css/controle_os.css"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -26,6 +27,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Prepare static site
+        run: |
+          mkdir -p docs/static/css
+          cp static/css/controle_os.css docs/static/css/controle_os.css
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
