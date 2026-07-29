@@ -2,9 +2,30 @@
 
 Plataforma web para acompanhamento de ordens de serviço, agendas, pendências operacionais e indicadores de campo.
 
-O projeto nasceu da necessidade de transformar planilhas operacionais dispersas em uma visão única, navegável e orientada à tomada de decisão. A aplicação processa arquivos Excel, normaliza os registros e disponibiliza dashboards interativos com filtros, rankings, faixas de atraso e indicadores de capacidade operacional.
+O projeto transforma planilhas operacionais dispersas em uma visão única, navegável e orientada à tomada de decisão. A aplicação processa arquivos Excel, normaliza os registros e disponibiliza dashboards interativos com filtros, rankings, faixas de atraso e indicadores de capacidade operacional.
 
-> **Projeto de portfólio:** os dados, nomes e credenciais reais não fazem parte deste repositório. A aplicação deve ser executada com bases fictícias ou anonimizadas.
+> **Projeto de portfólio:** os dados, nomes e credenciais reais não fazem parte deste repositório. A demonstração utiliza somente informações fictícias.
+
+## Demonstração
+
+[**Abrir demonstração estática**](https://jvfaraco.github.io/operational-dashboard-platform/)
+
+A demo foi criada a partir da identidade visual e dos componentes presentes nos templates do projeto. Ela funciona sem backend e pode ser publicada pelo GitHub Pages.
+
+![Visão geral do Operations Dashboard](docs/assets/dashboard-overview.svg)
+
+### O que funciona na demo
+
+- layout responsivo para desktop e dispositivos móveis;
+- cards de indicadores operacionais;
+- gráfico de volume por regional;
+- distribuição por faixa de atraso;
+- tabela de prioridades;
+- visão de capacidade das equipes;
+- botão para acessar o código-fonte;
+- impressão ou exportação da visão pelo navegador.
+
+A versão estática é uma vitrine. Login, upload de Excel, processamento com pandas e endpoints internos pertencem à aplicação Flask executada localmente ou em um servidor Python.
 
 ## Visão geral
 
@@ -18,7 +39,7 @@ A plataforma reúne cinco módulos principais:
 
 ## Problema resolvido
 
-Antes da aplicação, a análise dependia de múltiplas planilhas e filtros manuais. Isso dificultava responder perguntas simples, como:
+Antes da aplicação, a análise dependia de múltiplas planilhas e filtros manuais. Isso dificultava responder perguntas como:
 
 - Qual região concentra mais ordens pendentes?
 - Quais técnicos possuem maior volume?
@@ -41,6 +62,7 @@ A plataforma centraliza essas respostas em dashboards acessíveis por navegador.
 - API interna em JSON para separar processamento e visualização.
 - Variáveis de ambiente para credenciais e configuração.
 - Dados operacionais ignorados pelo Git.
+- Demonstração estática publicada pelo GitHub Pages.
 
 ## Stack
 
@@ -52,6 +74,7 @@ A plataforma centraliza essas respostas em dashboards acessíveis por navegador.
 | Visualização | Chart.js e Leaflet |
 | Configuração | python-dotenv |
 | Persistência atual | Arquivos Excel e metadados JSON locais |
+| Demo pública | HTML e CSS estáticos no GitHub Pages |
 
 ## Arquitetura
 
@@ -72,6 +95,21 @@ Leitura e normalização com pandas
 Dashboards e mapa operacional
 ```
 
+A demonstração pública segue um fluxo separado:
+
+```text
+Dados fictícios embutidos
+      │
+      ▼
+HTML e CSS estáticos
+      │
+      ▼
+GitHub Actions
+      │
+      ▼
+GitHub Pages
+```
+
 Uma descrição mais detalhada está em [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ## Estrutura
@@ -81,10 +119,17 @@ operational-dashboard-platform/
 ├── app.py
 ├── requirements.txt
 ├── .env.example
+├── .github/
+│   └── workflows/
+│       └── pages.yml
 ├── data/
 │   └── .gitkeep
 ├── docs/
-│   └── ARCHITECTURE.md
+│   ├── index.html
+│   ├── .nojekyll
+│   ├── ARCHITECTURE.md
+│   └── assets/
+│       └── dashboard-overview.svg
 ├── static/
 │   ├── css/
 │   └── js/
@@ -129,8 +174,6 @@ pip install -r requirements.txt
 
 ### 4. Configure o ambiente
 
-Copie o arquivo de exemplo:
-
 ```bash
 cp .env.example .env
 ```
@@ -144,8 +187,6 @@ Copy-Item .env.example .env
 Preencha valores locais e nunca envie o `.env` ao GitHub.
 
 ### 5. Adicione bases anonimizadas
-
-A aplicação lê arquivos na pasta `data/`. Os arquivos operacionais são ignorados pelo Git.
 
 ```text
 data/
@@ -162,6 +203,22 @@ python app.py
 ```
 
 Acesse `http://localhost:5000`.
+
+## Publicação da demo
+
+O workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) publica a pasta `docs/` após mudanças na branch `main`.
+
+Depois do merge, abra no GitHub:
+
+```text
+Settings → Pages → Source → GitHub Actions
+```
+
+A demo será disponibilizada em:
+
+```text
+https://jvfaraco.github.io/operational-dashboard-platform/
+```
 
 ## Endpoints principais
 
@@ -185,16 +242,17 @@ Acesse `http://localhost:5000`.
 - **JavaScript sem framework:** reduz dependências e mantém a interface simples de hospedar.
 - **Cache por data de modificação:** evita reler planilhas em todas as requisições.
 - **Waitress:** fornece servidor WSGI apropriado para execução fora do modo de desenvolvimento.
+- **Demo estática separada:** permite mostrar o produto sem expor backend, credenciais ou bases reais.
 
 ## Limitações conhecidas
 
-A versão atual ainda utiliza arquivos locais como fonte de dados. Para maior volume, concorrência e auditoria, a evolução natural é migrar usuários, histórico e registros processados para banco de dados, mantendo o Excel apenas como entrada ou integração temporária.
+A aplicação principal ainda utiliza arquivos locais como fonte de dados. Para maior volume, concorrência e auditoria, a evolução natural é migrar usuários, histórico e registros processados para banco de dados, mantendo o Excel apenas como entrada ou integração temporária.
 
-Outras evoluções planejadas:
+Evoluções planejadas:
 
 - autenticação com usuários e perfis em banco;
 - testes automatizados de rotas e transformações;
-- pipeline de qualidade no GitHub Actions;
+- pipeline de qualidade para o backend;
 - banco SQLite ou PostgreSQL;
 - importação assíncrona de arquivos grandes;
 - métricas de produtividade e histórico temporal;
