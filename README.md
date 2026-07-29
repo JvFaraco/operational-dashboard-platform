@@ -1,92 +1,100 @@
-# A365 Ops — Dashboard de Operações
+# Operations Dashboard Platform
 
-Dashboard interno desenvolvido com Flask para gestão e visualização de ordens de serviço, controle de agendamentos e monitoramento de inadimplência da operação Alarme 365.
+Plataforma web para acompanhamento de ordens de serviço, agendas, pendências operacionais e indicadores de campo.
 
----
+O projeto nasceu da necessidade de transformar planilhas operacionais dispersas em uma visão única, navegável e orientada à tomada de decisão. A aplicação processa arquivos Excel, normaliza os registros e disponibiliza dashboards interativos com filtros, rankings, faixas de atraso e indicadores de capacidade operacional.
 
-## Telas
+> **Projeto de portfólio:** os dados, nomes e credenciais reais não fazem parte deste repositório. A aplicação deve ser executada com bases fictícias ou anonimizadas.
 
-| Rota | Descrição |
-|------|-----------|
-| `/` | Home — visão geral do sistema |
-| `/login` | Autenticação de usuário |
-| `/upload` | Upload de planilhas `.xlsx` por base |
-| `/controle-os` | BI de Controle de OS (base: `bios.xlsx`) |
-| `/agendadas` | BI de OS Agendadas (`agendadas.xlsx`) |
-| `/nao-agendadas` | BI de OS Não Agendadas (`nao_agendadas.xlsx`) |
-| `/recred` | Painel de Recredenciamento / Inadimplência |
+## Visão geral
 
----
+A plataforma reúne cinco módulos principais:
+
+- **Controle de ordens de serviço:** visão consolidada por região, técnico, motivo e faixa de dias.
+- **Agendadas:** acompanhamento de atendimentos com data definida.
+- **Não agendadas:** identificação de pendências sem programação.
+- **Risco contratual:** análise de registros suspensos, exposição e tempo de permanência.
+- **Mapa de cobertura:** visualização geográfica de áreas, equipes e distribuição operacional.
+
+## Problema resolvido
+
+Antes da aplicação, a análise dependia de múltiplas planilhas e filtros manuais. Isso dificultava responder perguntas simples, como:
+
+- Qual região concentra mais ordens pendentes?
+- Quais técnicos possuem maior volume?
+- Quantos atendimentos ultrapassaram o prazo operacional?
+- Qual é a relação entre contas ativas e ordens abertas?
+- Onde estão os principais pontos de concentração geográfica?
+
+A plataforma centraliza essas respostas em dashboards acessíveis por navegador.
+
+## Principais recursos
+
+- Upload controlado de arquivos `.xlsx`.
+- Cache em memória invalidado quando a base é atualizada.
+- Indicadores e gráficos com filtros interativos.
+- Rankings por técnico, regional e motivo.
+- Faixas de tempo para priorização operacional.
+- Exportação de dados filtrados.
+- Tema claro e escuro.
+- Layout responsivo.
+- API interna em JSON para separar processamento e visualização.
+- Variáveis de ambiente para credenciais e configuração.
+- Dados operacionais ignorados pelo Git.
 
 ## Stack
 
-- **Backend**: Flask 3.0 + Waitress (servidor de produção)
-- **Dados**: pandas + openpyxl para leitura de planilhas Excel
-- **Frontend**: HTML5 + CSS3 + JavaScript puro (sem frameworks externos)
-- **Gráficos**: Chart.js 4.x (bar, doughnut)
-- **Autenticação**: Sessão Flask com variáveis de ambiente
+| Camada | Tecnologia |
+|---|---|
+| Backend | Python, Flask 3 e Waitress |
+| Processamento | pandas, NumPy e openpyxl |
+| Frontend | HTML, CSS, JavaScript e Jinja2 |
+| Visualização | Chart.js e Leaflet |
+| Configuração | python-dotenv |
+| Persistência atual | Arquivos Excel e metadados JSON locais |
 
----
+## Arquitetura
 
-## Funcionalidades por Dashboard
-
-### Controle de OS (`/controle-os`)
-- Cards de supervisor com OS, contas ativas e % OS/conta por regional
-- KPIs: total de OS, contas ativas, % OS/conta, +14 dias, técnicos ativos
-- Faixas de dias: 0-2 / 3-14 / +14 (click-to-filter no gráfico e nas pills)
-- Gráfico de tipo de OS (doughnut) com legenda interativa
-- Barras horizontais de OS por regional com % OS/conta
-- Ranking de técnicos EPV com filtro por especialista
-- Filtros: supervisor, região, cidade, motivo, tipo de OS
-- Badge de atualização da base (atualizado hoje / X dias)
-- Sidebar retrátil
-
-### RECRED — Inadimplência (`/recred`)
-- Cards de supervisor com OS, contas, % e exposição contratual
-- KPIs: total, contas ativas, % OS/conta, +14 dias, pausadas, exposição, média dias suspenso
-- Faixas de dias: 0-2 / 3-14 / +14 (click-to-filter)
-- Gráfico de exposição por regional com click-to-filter
-- Ranking de técnicos com exposição contratual
-- Filtros: supervisor, regional, faixa de dias, status de pausa
-- Exportação CSV filtrado
-
-### Base Compartilhada (Contas x EPV)
-- Upload único via `/upload` alimenta todos os dashboards simultaneamente
-- Armazenada em `data/base.xlsx`, cache invalidado a cada upload
-- Consumida via `/api/base` com dados de contas ativas por técnico/sigla
-
----
-
-## Estrutura do Projeto
-
+```text
+Planilhas Excel
+      │
+      ▼
+Upload e validação
+      │
+      ▼
+Leitura e normalização com pandas
+      │
+      ├── Cache em memória
+      ├── Metadados de atualização
+      └── APIs JSON
+              │
+              ▼
+Dashboards e mapa operacional
 ```
+
+Uma descrição mais detalhada está em [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+## Estrutura
+
+```text
 operational-dashboard-platform/
-├── app.py                  # Aplicação principal Flask
-├── requirements.txt        # Dependências Python
-├── data/                   # Planilhas e metadados (não versionado)
+├── app.py
+├── requirements.txt
+├── .env.example
+├── data/
 │   └── .gitkeep
-├── templates/              # Templates HTML (Jinja2)
-│   ├── base.html
-│   ├── home.html
-│   ├── login.html
-│   ├── upload.html
-│   ├── controle_os.html
-│   ├── agendadas.html
-│   ├── nao_agendadas.html
-│   └── recred.html
+├── docs/
+│   └── ARCHITECTURE.md
 ├── static/
-│   ├── css/                # Estilos por página
-│   └── js/                 # Scripts por página
-└── .claude/                # Contexto e skills para Claude Code
-    ├── CLAUDE.md
-    └── skills/
-        ├── add-dashboard.md
-        └── inspect-js/
+│   ├── css/
+│   └── js/
+├── templates/
+├── CONTRIBUTING.md
+├── SECURITY.md
+└── README.md
 ```
 
----
-
-## Como Executar
+## Execução local
 
 ### 1. Clone o repositório
 
@@ -95,16 +103,22 @@ git clone https://github.com/JvFaraco/operational-dashboard-platform.git
 cd operational-dashboard-platform
 ```
 
-### 2. Crie e ative o ambiente virtual
+### 2. Crie o ambiente virtual
 
 ```bash
-python -m venv venv
+python -m venv .venv
+```
 
-# Windows
-venv\Scripts\activate
+No Windows:
 
-# Linux / macOS
-source venv/bin/activate
+```bash
+.venv\Scripts\activate
+```
+
+No Linux ou macOS:
+
+```bash
+source .venv/bin/activate
 ```
 
 ### 3. Instale as dependências
@@ -113,61 +127,92 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure as variáveis de ambiente
+### 4. Configure o ambiente
 
-Crie um arquivo `.env` ou exporte no terminal:
+Copie o arquivo de exemplo:
 
 ```bash
-export A365_SECRET_KEY="sua_chave_secreta_aqui"
-export A365_MASTER_PASS="sua_senha_aqui"
+cp .env.example .env
 ```
 
-> Nunca suba os valores reais dessas variáveis para o repositório.
+No Windows PowerShell:
 
-### 5. Adicione as planilhas de dados
-
-Coloque os arquivos `.xlsx` na pasta `data/`:
-
+```powershell
+Copy-Item .env.example .env
 ```
+
+Preencha valores locais e nunca envie o `.env` ao GitHub.
+
+### 5. Adicione bases anonimizadas
+
+A aplicação lê arquivos na pasta `data/`. Os arquivos operacionais são ignorados pelo Git.
+
+```text
 data/
-├── bios.xlsx           # Base de Controle de OS
-├── agendadas.xlsx      # OS Agendadas
-├── nao_agendadas.xlsx  # OS Não Agendadas
-└── base.xlsx           # Contas x EPV (base compartilhada)
+├── bios.xlsx
+├── agendadas.xlsx
+├── nao_agendadas.xlsx
+└── base.xlsx
 ```
 
-### 6. Inicie o servidor
+### 6. Inicie
 
 ```bash
 python app.py
 ```
 
-Disponível em:
+Acesse `http://localhost:5000`.
 
-```
-Local:  http://localhost:5000
-Rede:   http://<ip-da-maquina>:5000
-```
+## Endpoints principais
 
----
+| Endpoint | Método | Finalidade |
+|---|---:|---|
+| `/` | GET | Página inicial |
+| `/upload` | GET/POST | Importação de bases |
+| `/controle-os` | GET | Dashboard consolidado |
+| `/agendadas` | GET | Ordens agendadas |
+| `/nao-agendadas` | GET | Ordens sem agenda |
+| `/recred` | GET | Indicadores de risco contratual |
+| `/mapa-cobertura` | GET | Mapa operacional |
+| `/api/controle-os` | GET | Dados consolidados em JSON |
+| `/api/base` | GET | Base compartilhada em JSON |
+| `/api/meta/<tipo>` | GET | Metadados da base |
 
-## APIs Internas
+## Decisões técnicas
 
-| Endpoint | Método | Descrição |
-|----------|--------|-----------|
-| `/api/controle-os` | GET | Dados da base `bios.xlsx` |
-| `/api/agendadas` | GET | Dados da base `agendadas.xlsx` |
-| `/api/nao-agendadas` | GET | Dados da base `nao_agendadas.xlsx` |
-| `/api/recred` | GET | Registros de inadimplência |
-| `/api/base` | GET | Contas x EPV (base compartilhada) |
-| `/api/meta/<tipo>` | GET | Metadados e data de atualização de cada base |
+- **Flask:** suficiente para uma aplicação interna leve, com baixa complexidade de implantação.
+- **pandas:** adequado para transformar bases Excel já utilizadas pela operação.
+- **JavaScript sem framework:** reduz dependências e mantém a interface simples de hospedar.
+- **Cache por data de modificação:** evita reler planilhas em todas as requisições.
+- **Waitress:** fornece servidor WSGI apropriado para execução fora do modo de desenvolvimento.
 
----
+## Limitações conhecidas
 
-## Autenticação
+A versão atual ainda utiliza arquivos locais como fonte de dados. Para maior volume, concorrência e auditoria, a evolução natural é migrar usuários, histórico e registros processados para banco de dados, mantendo o Excel apenas como entrada ou integração temporária.
 
-Acesso ao upload e funções protegidas exige login. A senha é única (master password) configurada via variável de ambiente `A365_MASTER_PASS`.
+Outras evoluções planejadas:
 
----
+- autenticação com usuários e perfis em banco;
+- testes automatizados de rotas e transformações;
+- pipeline de qualidade no GitHub Actions;
+- banco SQLite ou PostgreSQL;
+- importação assíncrona de arquivos grandes;
+- métricas de produtividade e histórico temporal;
+- implantação com container.
 
-> Projeto desenvolvido para uso interno. Os dados operacionais não são versionados.
+## Segurança e privacidade
+
+Este repositório não deve conter:
+
+- planilhas reais;
+- nomes de clientes ou colaboradores;
+- endereços e coordenadas reais;
+- tokens, senhas ou chaves;
+- URLs internas;
+- exports de sistemas corporativos.
+
+Consulte [`SECURITY.md`](SECURITY.md) antes de publicar alterações.
+
+## Autor
+
+Desenvolvido por **João Victor Faraco** como projeto de automação, dados e gestão operacional.
