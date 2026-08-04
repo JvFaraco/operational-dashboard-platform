@@ -1,1 +1,53 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Operations Dashboard Demo</title><meta name="description" content="Demonstração estática de uma plataforma de gestão operacional."><style>:root{--bg:#08111f;--panel:#122139;--line:#263b57;--text:#eef5ff;--muted:#91a5c0;--blue:#4ba3ff;--green:#3dd58c;--amber:#
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demonstração estática do Operations Dashboard Platform.">
+  <title>Controle de OS — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/controle_os.css">
+  <link rel="stylesheet" href="assets/demo.css">
+</head>
+<body>
+<header class="header">
+  <a href="#" class="logo-link"><div class="logo-name">Operations Dashboard</div><div class="logo-tag">Demo de Portfólio</div></a>
+  <div class="header-right"><span class="hbadge" id="headerCount">428 OS</span><button class="btn-icon" id="sidebarToggle" title="Minimizar/expandir menu">☰</button><button class="btn-icon" id="themeToggle" title="Alternar tema">◐</button></div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <div><div class="sbt">Base de Dados</div><div id="metaInfo" class="demo-meta">Dados fictícios<br>Atualizado hoje às 08:45</div><div id="xlsxStatus"></div><a href="#" class="btn-p demo-disabled">Base demonstrativa</a></div>
+  <div><div class="sbt">Tipo de O.S</div><div class="tos-bar"><button class="tos-btn" data-tos="Instalação">📦 Instalação</button><button class="tos-btn" data-tos="Manutenção">🔧 Manutenção</button><button class="tos-btn" data-tos="Administrativa">✏️ Administrativa</button><button class="tos-btn" data-tos="Desinstalação">🗑️ Desinstalação</button></div></div>
+  <div class="sbt">Filtro Rápido — Dias</div><div class="bpills"><div class="bpill" data-b="0-2">0-2 dias</div><div class="bpill" data-b="3-14">3-14 dias</div><div class="bpill" data-b="15+">+14 dias</div></div>
+  <div class="sdiv"></div>
+  <div><div class="sbt">Filtros</div>
+    <label class="demo-label">Região</label><select class="demo-select" id="regiaoFilter"><option value="">Todas as regiões</option></select>
+    <label class="demo-label">Cidade</label><select class="demo-select" id="cidadeFilter"><option value="">Todas as cidades</option></select>
+    <label class="demo-label">Motivo da OS</label><select class="demo-select" id="motivoFilter"><option value="">Todos os motivos</option></select>
+    <div class="demo-reset"><button class="btn-g" id="resetBtn">↺ Limpar todos os filtros</button></div>
+  </div>
+  <div class="sdiv"></div><div class="demo-export"><div class="sbt">Exportar</div><button class="btn-s" id="exportBtn">⇩ Exportar CSV filtrado</button></div>
+</aside>
+<main class="main">
+  <div class="demo-banner"><strong>DEMO PÚBLICA</strong><span>Interface real do projeto com registros fictícios e anonimizados.</span><a href="https://github.com/JvFaraco/operational-dashboard-platform">Ver repositório</a></div>
+  <div class="find" id="filterIndicator"><span class="bdot" id="filterDot"></span><span id="filterLabel"></span><button class="find-clear" id="clearBucketBtn">×</button></div>
+  <div class="supwrap"><span class="viewtitle" id="viewTitle">Visão Geral</span><button class="backbtn" id="backOverview">‹ Visão Geral</button></div><div class="supcards" id="supCards"></div>
+  <div class="krow">
+    <div class="kpi accent" id="kpiAll"><div class="kico">▤</div><div class="klab">Total de OS</div><div class="kval" id="kpiTotal">0</div><div class="khi">Em Aberto</div></div>
+    <div class="kpi"><div class="kico">⌁</div><div class="klab">Contas ativas</div><div class="kval" id="kpiContas" style="color:var(--blue)">0</div></div>
+    <div class="kpi"><div class="kico">◇</div><div class="klab">% O.S / Conta</div><div class="kval" id="kpiPct" style="color:#8b5cf6">—</div><div class="khi">O.S ÷ contas ativas</div></div>
+    <div class="kpi" data-bucket="15+"><div class="kico">◷</div><div class="klab">+14 dias</div><div class="kval" id="kpi31" style="color:#e05050">0</div><div class="khi">Clique para filtrar</div></div>
+    <div class="kpi"><div class="kico">♙</div><div class="klab">Técnicos ativos</div><div class="kval" id="kpiTechs">0</div><div class="khi">Com OS abertas</div></div>
+  </div>
+  <div class="cgrid">
+    <div class="card"><div class="ch"><span class="ct">O.S por Faixa de Dias em Aberto</span><span class="demo-hint">Clique para filtrar</span></div><div class="cbody"><canvas id="bucketChart"></canvas></div></div>
+    <div class="card"><div class="ch"><span class="ct">O.S por Tipo</span><span class="demo-hint">Clique para filtrar</span></div><div class="cbody pie-body"><div class="pie-canvas"><canvas id="motivoChart"></canvas></div><div class="pie-legend" id="tipoLegend"></div></div></div>
+  </div>
+  <div class="card"><div class="ch"><span class="ct">O.S por Regional</span><span class="demo-hint">% O.S por conta = O.S ÷ contas ativas</span></div><div class="reglist" id="regList"></div></div>
+  <div class="mgrid"><div class="card"><div class="ch"><span class="ct">Ranking por EPV</span><span class="pill" id="techPill">0 Técnicos</span></div><div class="tw"><table><thead><tr><th>#</th><th>Especialista</th><th>OS</th><th>Sigla</th></tr></thead><tbody id="techBody"></tbody></table></div></div></div>
+  <div class="card"><div class="ch"><span class="ct">Nº das O.S Abertas</span><span class="pill" id="osPill">0</span></div><div class="osg" id="osList"></div></div>
+</main></div><div id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script><script src="assets/demo.js"></script>
+</body></html>
