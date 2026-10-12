@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-12",
+  "purpose": "Public demonstration of a solution developed for Orsegups",
+  "pages": {
+    "os.html": {
+      "source": "dashboard/ControledeOS.html",
+      "cssSha256": [
+        "e14560feb07ce1672be8c5ee14d0412b076991030c3f7727d5b67ab4b26d6a9f"
+      ]
+    },
+    "produtividade.html": {
+      "source": "dashboard/A365_Produtividade.html",
+      "cssSha256": [
+        "a25d2ff5d7519358fb906afc7efbca7ca5ccdb458a9976026df70cc754e4ef40"
+      ]
+    },
+    "rotas.html": {
+      "source": "routes/mapa_cobertura_rotas.html",
+      "cssSha256": [
+        "337bfca5cabd03b39815b2700febe2b3b7edf55921c59cd49f88ecb328212303",
+        "748adf9be9a407caf7b01a031f0519ca6d1e3724869a6f9c465a270d287d93a2"
+      ]
+    }
+  }
+}
