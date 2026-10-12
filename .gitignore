@@ -40,3 +40,9 @@ dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Static demo development
+node_modules/
+test-results/
+playwright-report/
+.preview/

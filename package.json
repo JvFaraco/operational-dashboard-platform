@@ -1,0 +1,1 @@
+{"name":"orsegups-portal-public-demo","version":"2.0.0","private":true,"scripts":{"dev":"node tests/serve.cjs","test":"playwright test"},"devDependencies":{"@playwright/test":"1.64.0","acorn":"8.19.0","leaflet":"1.9.4"}}

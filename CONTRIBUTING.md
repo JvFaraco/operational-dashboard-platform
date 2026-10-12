@@ -3,8 +3,8 @@
 ## Preparação
 
 1. Crie uma branch a partir de `main`.
-2. Configure o ambiente usando `.env.example`.
-3. Trabalhe somente com dados fictícios ou anonimizados.
+2. Para a demo atual, execute `npm ci` e `npm run dev`. `.env.example` pertence ao Flask histórico.
+3. Trabalhe somente com dados inteiramente fictícios na demonstração pública.
 4. Mantenha alterações pequenas e fáceis de revisar.
 
 ## Padrão de branches
@@ -19,8 +19,7 @@ refactor/area-alterada
 ## Antes do commit
 
 ```bash
-python -m compileall app.py
-python -m pip check
+npm test
 git diff --check
 ```
 

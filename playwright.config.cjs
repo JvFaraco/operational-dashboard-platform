@@ -1,0 +1,2 @@
+const { defineConfig } = require('@playwright/test');
+module.exports = defineConfig({testDir:'tests',timeout:20000,expect:{timeout:3000},workers:1,use:{baseURL:'http://127.0.0.1:4175/operational-dashboard-platform/',channel:process.env.PW_CHANNEL||undefined,trace:'retain-on-failure'},webServer:{command:'node tests/serve.cjs',url:'http://127.0.0.1:4175/operational-dashboard-platform/',reuseExistingServer:!process.env.CI}});

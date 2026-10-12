@@ -1,53 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Demonstração estática do Operations Dashboard Platform.">
-  <title>Controle de OS — Demo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/controle_os.css">
-  <link rel="stylesheet" href="assets/demo.css">
-</head>
-<body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal A365 — Demo pública Orsegups</title>
+<link rel="stylesheet" href="assets/portal.css"><link rel="stylesheet" href="assets/public-boundary.css">
+<meta name="description" content="Demonstração pública da solução Portal A365 desenvolvida para a Orsegups, com dados fictícios."></head>
+<body data-page="home"><a class="skip-link" href="#main">Pular para o conteúdo</a>
+<span class="ambient one"></span><span class="ambient two"></span>
 <header class="header">
-  <a href="#" class="logo-link"><div class="logo-name">Operations Dashboard</div><div class="logo-tag">Demo de Portfólio</div></a>
-  <div class="header-right"><span class="hbadge" id="headerCount">428 OS</span><button class="btn-icon" id="sidebarToggle" title="Minimizar/expandir menu">☰</button><button class="btn-icon" id="themeToggle" title="Alternar tema">◐</button></div>
+  <div class="header-left">
+    <a href="index.html" class="logo-link" aria-label="Início do Portal A365">
+      <span class="logo-copy"><span class="logo-name">A365 - Portal</span><span class="logo-tag">Central de Operações</span></span>
+    </a>
+  </div>
+  <div class="header-right">
+    <span class="user-pill">Visitante Demo</span>
+    <a class="hbtn" href="admin.html">Admin · Demo</a>
+    <a class="hbtn" href="https://github.com/JvFaraco/operational-dashboard-platform" target="_blank" rel="noopener noreferrer">Código</a>
+    <button class="btn-icon" id="themeToggle" type="button" title="Alternar tema" aria-label="Alternar tema"></button>
+  </div>
 </header>
-<div class="layout">
-<aside class="sidebar">
-  <div><div class="sbt">Base de Dados</div><div id="metaInfo" class="demo-meta">Dados fictícios<br>Atualizado hoje às 08:45</div><div id="xlsxStatus"></div><a href="#" class="btn-p demo-disabled">Base demonstrativa</a></div>
-  <div><div class="sbt">Tipo de O.S</div><div class="tos-bar"><button class="tos-btn" data-tos="Instalação">📦 Instalação</button><button class="tos-btn" data-tos="Manutenção">🔧 Manutenção</button><button class="tos-btn" data-tos="Administrativa">✏️ Administrativa</button><button class="tos-btn" data-tos="Desinstalação">🗑️ Desinstalação</button></div></div>
-  <div class="sbt">Filtro Rápido — Dias</div><div class="bpills"><div class="bpill" data-b="0-2">0-2 dias</div><div class="bpill" data-b="3-14">3-14 dias</div><div class="bpill" data-b="15+">+14 dias</div></div>
-  <div class="sdiv"></div>
-  <div><div class="sbt">Filtros</div>
-    <label class="demo-label">Região</label><select class="demo-select" id="regiaoFilter"><option value="">Todas as regiões</option></select>
-    <label class="demo-label">Cidade</label><select class="demo-select" id="cidadeFilter"><option value="">Todas as cidades</option></select>
-    <label class="demo-label">Motivo da OS</label><select class="demo-select" id="motivoFilter"><option value="">Todos os motivos</option></select>
-    <div class="demo-reset"><button class="btn-g" id="resetBtn">↺ Limpar todos os filtros</button></div>
+
+<main id="main"><div class="public-demo-notice menu-notice"><strong>DEMONSTRAÇÃO PÚBLICA</strong><span>Esta é uma demonstração de uma solução desenvolvida para a Orsegups. Todos os dados são fictícios.</span></div>
+  <section class="hero-panel" aria-labelledby="welcomeTitle">
+    <div>
+      <div class="eyebrow"><span class="status-dot"></span>Ambiente demonstrativo</div>
+      <h1 id="welcomeTitle">Olá, <span>Visitante Demo</span></h1>
+      <p>Acompanhe a operação, explore a cobertura das rotas e consulte a produtividade em um único ambiente.</p>
+      <div class="hero-meta">
+        <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dados fictícios</span>
+        <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/></svg>Navegação livre</span>
+        <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>3 módulos</span>
+      </div>
+    </div>
+    <aside class="hero-clock" aria-label="Data e hora atuais">
+      <span class="clock-label">Agora</span>
+      <strong class="clock-time" id="portalTime">--:--</strong>
+      <span class="clock-date" id="portalDate">Carregando data...</span>
+    </aside>
+  </section>
+
+  <div class="section-heading">
+    <div><h2>Ferramentas da operação</h2><p>Escolha um módulo para começar.</p></div>
+    <span class="section-count">3 acessos disponíveis</span>
   </div>
-  <div class="sdiv"></div><div class="demo-export"><div class="sbt">Exportar</div><button class="btn-s" id="exportBtn">⇩ Exportar CSV filtrado</button></div>
-</aside>
-<main class="main">
-  <div class="demo-banner"><strong>DEMO PÚBLICA</strong><span>Interface real do projeto com registros fictícios e anonimizados.</span><a href="https://github.com/JvFaraco/operational-dashboard-platform">Ver repositório</a></div>
-  <div class="find" id="filterIndicator"><span class="bdot" id="filterDot"></span><span id="filterLabel"></span><button class="find-clear" id="clearBucketBtn">×</button></div>
-  <div class="supwrap"><span class="viewtitle" id="viewTitle">Visão Geral</span><button class="backbtn" id="backOverview">‹ Visão Geral</button></div><div class="supcards" id="supCards"></div>
-  <div class="krow">
-    <div class="kpi accent" id="kpiAll"><div class="kico">▤</div><div class="klab">Total de OS</div><div class="kval" id="kpiTotal">0</div><div class="khi">Em Aberto</div></div>
-    <div class="kpi"><div class="kico">⌁</div><div class="klab">Contas ativas</div><div class="kval" id="kpiContas" style="color:var(--blue)">0</div></div>
-    <div class="kpi"><div class="kico">◇</div><div class="klab">% O.S / Conta</div><div class="kval" id="kpiPct" style="color:#8b5cf6">—</div><div class="khi">O.S ÷ contas ativas</div></div>
-    <div class="kpi" data-bucket="15+"><div class="kico">◷</div><div class="klab">+14 dias</div><div class="kval" id="kpi31" style="color:#e05050">0</div><div class="khi">Clique para filtrar</div></div>
-    <div class="kpi"><div class="kico">♙</div><div class="klab">Técnicos ativos</div><div class="kval" id="kpiTechs">0</div><div class="khi">Com OS abertas</div></div>
-  </div>
-  <div class="cgrid">
-    <div class="card"><div class="ch"><span class="ct">O.S por Faixa de Dias em Aberto</span><span class="demo-hint">Clique para filtrar</span></div><div class="cbody"><canvas id="bucketChart"></canvas></div></div>
-    <div class="card"><div class="ch"><span class="ct">O.S por Tipo</span><span class="demo-hint">Clique para filtrar</span></div><div class="cbody pie-body"><div class="pie-canvas"><canvas id="motivoChart"></canvas></div><div class="pie-legend" id="tipoLegend"></div></div></div>
-  </div>
-  <div class="card"><div class="ch"><span class="ct">O.S por Regional</span><span class="demo-hint">% O.S por conta = O.S ÷ contas ativas</span></div><div class="reglist" id="regList"></div></div>
-  <div class="mgrid"><div class="card"><div class="ch"><span class="ct">Ranking por EPV</span><span class="pill" id="techPill">0 Técnicos</span></div><div class="tw"><table><thead><tr><th>#</th><th>Especialista</th><th>OS</th><th>Sigla</th></tr></thead><tbody id="techBody"></tbody></table></div></div></div>
-  <div class="card"><div class="ch"><span class="ct">Nº das O.S Abertas</span><span class="pill" id="osPill">0</span></div><div class="osg" id="osList"></div></div>
-</main></div><div id="toast"></div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script><script src="assets/demo.js"></script>
-</body></html>
+
+  <section class="grid" aria-label="Módulos do portal">
+    <a class="card tool-card" data-accent="blue" href="os.html">
+      <div class="card-top">
+        <span class="icon-wrap"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg></span>
+        <span class="card-status"><i></i>Disponível</span>
+      </div>
+      <h3>Controle de O.S</h3>
+      <p>Acompanhe as ordens de serviço em aberto e os indicadores operacionais.</p>
+      <span class="card-footer">Abrir controle <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></span>
+    </a>
+
+    <a class="card tool-card" data-accent="cyan" href="rotas.html">
+      <div class="card-top">
+        <span class="icon-wrap"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21 3 6"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg></span>
+        <span class="card-status"><i></i>Disponível</span>
+      </div>
+      <h3>Mapa de Rotas</h3>
+      <p>Explore cidades, bairros, especialistas e volumes da cobertura geográfica.</p>
+      <span class="card-footer">Explorar mapa <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></span>
+    </a>
+
+    <a class="card tool-card" data-accent="amber" href="produtividade.html">
+      <div class="card-top">
+        <span class="icon-wrap"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 16 4-5 4 3 5-7"/></svg></span>
+        <span class="card-status"><i></i>Disponível</span>
+      </div>
+      <h3>Produtividade</h3>
+      <p>Consulte métricas, desempenho por regional e ordens de serviço concluídas.</p>
+      <span class="card-footer">Ver dashboard <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></span>
+    </a>
+  </section>
+</main>
+
+<script>// Toggle de tema — mesmos ícones/lógica do dashboard (ControledeOS.html).
+// Usa uma chave própria (a365_theme) pra não colidir com o estado de filtros
+// do dashboard (bi_a365_state), mas o resultado visual é idêntico.
+(function(){
+  const SUN='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  const MOON='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  const root=document.documentElement;
+  const btn=document.getElementById('themeToggle');
+  function apply(theme){
+    root.setAttribute('data-theme',theme);
+    if(btn){
+      btn.innerHTML = theme==='light' ? SUN : MOON;
+      const label = theme==='light' ? 'Ativar tema escuro' : 'Ativar tema claro';
+      btn.title = label;
+      btn.setAttribute('aria-label', label);
+    }
+  }
+  let saved='dark';
+  try{ saved=localStorage.getItem('a365_theme')||'dark'; }catch(e){}
+  apply(saved);
+  if(btn) btn.addEventListener('click',()=>{
+    const next = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+    apply(next);
+    try{ localStorage.setItem('a365_theme',next); }catch(e){}
+  });
+})();
+
+// Formulário de EPV (criar/editar em /admin): salvar SEMPRE acontece --
+// o confirm() só decide se o mapa é regenerado agora ou depois (botão
+// "Regenerar mapa agora"). Por isso NUNCA bloqueia o envio (sempre
+// "return true"), só marca o campo oculto "rebuild" com a resposta.
+function epvConfirmRebuild(form, acaoLabel){
+  const querRebuild = confirm(acaoLabel + ' Regenerar o mapa agora?');
+  const campo = form.elements['rebuild'];
+  if(campo) campo.value = querRebuild ? '1' : '0';
+  return true;
+}
+
+// Excluir EPV: DUAS perguntas distintas. A 1ª ("excluir?") de fato decide
+// se a exclusão acontece -- "Cancelar" aborta o envio, nada é apagado. Só
+// depois de confirmada a exclusão vem a 2ª pergunta (regenerar agora?),
+// que -- igual ao criar/editar -- nunca bloqueia o envio, só marca o campo
+// oculto "rebuild". Nome lido de data-epv-name (atributo HTML, escapado
+// normalmente pelo html.escape() do servidor) em vez de vir embutido como
+// literal dentro do onsubmit -- um nome com apóstrofo (ex.: "D'Ávila")
+// quebraria a string JS se viesse interpolado direto no atributo.
+function epvConfirmDelete(form){
+  const nome = form.dataset.epvName || 'este EPV';
+  if(!confirm('Excluir ' + nome + ' do cadastro? Essa ação não pode ser desfeita.')){
+    return false;
+  }
+  const querRebuild = confirm('Regenerar o mapa agora?');
+  const campo = form.elements['rebuild'];
+  if(campo) campo.value = querRebuild ? '1' : '0';
+  return true;
+}
+
+// Toasts (notices de /admin): entram deslizando, empilham no canto, e
+// somem sozinhos depois de um tempo -- ou no clique do X. Não depende de
+// nenhum estado do servidor: só decora os elementos .toast que já vieram
+// renderizados na página (ver server/app.py, EPV_NOTICE/FINISHED_OS_NOTICE/
+// OPEN_OS_NOTICE).
+(function(){
+  const toasts = document.querySelectorAll('.toast, .import-notice');
+  if(!toasts.length) return;
+  let stack = document.getElementById('toastStack');
+  if(!stack){
+    stack = document.createElement('div');
+    stack.id = 'toastStack';
+    stack.className = 'toast-stack';
+    document.body.appendChild(stack);
+  }
+  toasts.forEach(function(el, i){
+    el.classList.add('toast');
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'toast-close';
+    closeBtn.setAttribute('aria-label', 'Fechar aviso');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.addEventListener('click', function(){ el.remove(); });
+    el.appendChild(closeBtn);
+    stack.appendChild(el);
+    setTimeout(function(){ el.classList.add('toast-show'); }, 20 + i * 80);
+    setTimeout(function(){ el.remove(); }, 9000 + i * 80);
+  });
+})();
+
+// Seções recolhíveis (ex.: formulário "Novo EPV" em /admin): botão com
+// aria-expanded/aria-controls, decorado aqui. A animação de abrir/fechar é
+// só CSS (ver .collapse-body) e já respeita prefers-reduced-motion lá --
+// aqui só alterna hidden + aria-expanded, sem imitar a transição em JS.
+document.querySelectorAll('[data-collapse-toggle]').forEach(function(btn){
+  const targetId = btn.getAttribute('aria-controls');
+  const target = targetId && document.getElementById(targetId);
+  if(!target) return;
+  btn.addEventListener('click', function(){
+    const abrindo = target.hasAttribute('hidden');
+    if(abrindo){ target.removeAttribute('hidden'); }
+    else { target.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', abrindo ? 'true' : 'false');
+  });
+});
+
+// Central de alimentação manual (/admin): os três fallbacks compartilham
+// um único bloco. Só o fluxo escolhido fica visível e interativo; a última
+// escolha é lembrada no navegador, enquanto um retorno do upload tem
+// prioridade para reabrir exatamente o painel que acabou de ser usado.
+(function(){
+  const hub = document.getElementById('manualFeedHub');
+  if(!hub) return;
+  const choices = Array.from(hub.querySelectorAll('[data-feed-target]'));
+  const panels = Array.from(hub.querySelectorAll('[data-feed-panel]'));
+  const empty = hub.querySelector('[data-feed-empty]');
+  const validNames = choices.map(function(choice){ return choice.dataset.feedTarget; });
+
+  function selectFeed(name, remember){
+    const valid = validNames.indexOf(name) !== -1;
+    choices.forEach(function(choice){
+      const active = valid && choice.dataset.feedTarget === name;
+      choice.classList.toggle('active', active);
+      choice.setAttribute('aria-selected', active ? 'true' : 'false');
+      choice.tabIndex = active || !valid ? 0 : -1;
+    });
+    panels.forEach(function(panel){
+      const active = valid && panel.dataset.feedPanel === name;
+      panel.classList.toggle('active', active);
+      panel.setAttribute('aria-hidden', active ? 'false' : 'true');
+      panel.inert = !active;
+    });
+    if(empty) empty.hidden = valid;
+    if(valid && remember){
+      try{ localStorage.setItem('a365_manual_feed', name); }catch(e){}
+    }
+  }
+
+  choices.forEach(function(choice, index){
+    choice.addEventListener('click', function(){
+      selectFeed(choice.dataset.feedTarget, true);
+    });
+    choice.addEventListener('keydown', function(event){
+      let nextIndex = null;
+      if(event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = (index + 1) % choices.length;
+      if(event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = (index - 1 + choices.length) % choices.length;
+      if(event.key === 'Home') nextIndex = 0;
+      if(event.key === 'End') nextIndex = choices.length - 1;
+      if(nextIndex === null) return;
+      event.preventDefault();
+      const next = choices[nextIndex];
+      selectFeed(next.dataset.feedTarget, true);
+      next.focus();
+    });
+  });
+
+  let initial = hub.dataset.initialFeed || '';
+  if(validNames.indexOf(initial) === -1){
+    try{ initial = localStorage.getItem('a365_manual_feed') || ''; }catch(e){ initial = ''; }
+  }
+  selectFeed(initial, false);
+})();
+
+// Log da regeneração do mapa (/admin): a página só renderiza o log e a
+// data de "Última geração" uma vez, no carregamento -- pra ver o andamento
+// era preciso dar F5 na mão repetidamente (achado real, relatado pelo
+// usuário: "pra atualizar preciso dar f5 na página"). Faz polling em
+// /admin/rebuild-status e só troca o conteúdo quando ele muda de verdade,
+// sem recarregar a página inteira. Quando "Última geração" muda em relação
+// ao que a página tinha no load, é sinal de que UMA regeneração nova
+// terminou -- aí some sozinho o badge "Regeneração iniciada" (que senão
+// ficava preso na tela pra sempre, mesmo com o trabalho de verdade já
+// concluído há muito tempo).
+(function(){
+  const wrap = document.getElementById('rebuildLogWrap');
+  const statusEl = document.getElementById('mapaStatus');
+  const badgeEl = document.getElementById('mapaRegenBadge');
+  if(!wrap || !statusEl) return;
+  let ultimoLog = wrap.textContent;
+  function tick(){
+    fetch('/admin/rebuild-status', {headers:{'accept':'application/json'}})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(data){
+        if(!data) return;
+        if(data.log !== ultimoLog){
+          ultimoLog = data.log;
+          wrap.replaceChildren();
+          if(data.log){
+            const pre = document.createElement('pre');
+            pre.className = 'rebuild-log';
+            pre.textContent = data.log;
+            wrap.appendChild(pre);
+          }
+          wrap.scrollTop = wrap.scrollHeight;
+        }
+        if(data.mapa_status !== statusEl.textContent){
+          statusEl.textContent = data.mapa_status;
+        }
+        // Um build concorrente/antigo pode mudar o timestamp enquanto a
+        // coleta de volume ainda roda. Só encerra o indicador quando o
+        // processo acompanhado realmente terminou.
+        if(badgeEl && data.running === false) badgeEl.innerHTML = '';
+      })
+      .catch(function(){ /* rede instável -- tenta de novo no próximo tick */ });
+  }
+  tick();
+  setInterval(tick, 4000);
+})();
+
+// Botão de olho nos campos de senha: <button class="pw-toggle" data-for="ID">
+(function(){
+  const EYE='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+  const EYE_OFF='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0112 20c-7 0-11-8-11-8a21.8 21.8 0 015.06-6.06M9.9 4.24A10.94 10.94 0 0112 4c7 0 11 8 11 8a21.8 21.8 0 01-3.22 4.53M14.12 14.12a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+  document.querySelectorAll('.pw-toggle').forEach(function(btn){
+    btn.type='button';
+    btn.innerHTML=EYE;
+    btn.title='Mostrar senha';
+    btn.setAttribute('aria-label','Mostrar senha');
+    btn.setAttribute('aria-pressed','false');
+    const input=document.getElementById(btn.dataset.for);
+    if(!input) return;
+    btn.addEventListener('click',function(){
+      const show = input.type==='password';
+      input.type = show ? 'text' : 'password';
+        btn.innerHTML = show ? EYE_OFF : EYE;
+        btn.title = show ? 'Ocultar senha' : 'Mostrar senha';
+        btn.setAttribute('aria-label', show ? 'Ocultar senha' : 'Mostrar senha');
+        btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+    });
+  });
+})();
+</script>
+<script>
+(() => {
+  const timeEl = document.getElementById('portalTime');
+  const dateEl = document.getElementById('portalDate');
+  const updateClock = () => {
+    const now = new Date();
+    timeEl.textContent = now.toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
+    dateEl.textContent = now.toLocaleDateString('pt-BR', {weekday:'long', day:'2-digit', month:'long'});
+  };
+  updateClock();
+  setInterval(updateClock, 30000);
+
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.tool-card').forEach(card => {
+    card.addEventListener('pointermove', event => {
+      const box = card.getBoundingClientRect();
+      const x = event.clientX - box.left;
+      const y = event.clientY - box.top;
+      card.style.setProperty('--mx', `${x}px`);
+      card.style.setProperty('--my', `${y}px`);
+      if (!reduced && event.pointerType !== 'touch') {
+        const rx = ((y / box.height) - .5) * -2.3;
+        const ry = ((x / box.width) - .5) * 2.3;
+        card.style.transform = `translateY(-5px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      }
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+    card.addEventListener('pointerdown', event => {
+      if (reduced) return;
+      const box = card.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      const size = Math.max(box.width, box.height) * 1.7;
+      ripple.className = 'ripple';
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${event.clientX-box.left}px;top:${event.clientY-box.top}px`;
+      card.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+})();
+</script>
+<script src="assets/public-boundary.js"></script></body>
+</html>
