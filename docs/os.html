@@ -661,7 +661,7 @@ function aplicarRegionais(lista){
   if(!Object.keys(novo).length) return false;
   const antes=JSON.stringify([SIGLA_CIDADE,SUPERVISORES]);
   Object.assign(SIGLA_CIDADE,cidades);
-  
+
   const ordem=Object.keys(SUPERVISORES);
   ordem.forEach(s=>{delete SUPERVISORES[s];});
   ordem.filter(s=>novo[s]).concat(Object.keys(novo).filter(s=>!ordem.includes(s)))
@@ -675,7 +675,7 @@ async function carregarRegionais(){
     if(!resp.ok) return false;
     const data=await resp.json();
     return aplicarRegionais(data&&data.regionais);
-  }catch(e){ return false; }  
+  }catch(e){ return false; }
 }
 function embutirRegionais(src){
   const json=JSON.stringify(EMBED_REGIONAIS).replace(/</g,'\\u003c');
@@ -738,13 +738,13 @@ function recomputeContas(){
     if(!CONTAS_POR_SIGLA[sigla]) CONTAS_POR_SIGLA[sigla]=0;
     CONTAS_POR_SIGLA[sigla]+=contas; CONTAS_TOTAL+=contas;
   });
-  
-  
-  
+
+
+
   CONTAS_TOTAL += CONTAS_SEM_ROTA;
-  
-  
-  
+
+
+
   if(CONTAS_TOTAL_EXATO!==null) CONTAS_TOTAL=CONTAS_TOTAL_EXATO;
 }
 recomputeContas();
@@ -757,7 +757,7 @@ let activeTiposOS = new Set();
 
 let activeOsDup = false;
 let activeTipoTec = '';
-let activeEscopo = ''; 
+let activeEscopo = '';
 let activeKanbanCol = null, activeKanbanColLabel = '';
 const sel={regiao:new Set(),cidade:new Set(),tipo:new Set()};
 
@@ -824,12 +824,12 @@ function norm(r){
   })(r['Dias'] ?? r['# Dias (Bruto)']);
   let b='0-2';
   if(dias<=2) b='0-2'; else if(dias<=14) b='3-14'; else b='15+';
-  
+
   const p=tech.split('-').map(x=>x.trim());
   const semTecnico = tech === '';
   let sig = String(r['Sigla']||'').trim(); if(!sig) sig = p[1]||'';
   if(semTecnico) sig = SEM_TECNICO;
-  const tipoTec = (p[2]||'').toUpperCase();        
+  const tipoTec = (p[2]||'').toUpperCase();
   const nomeTec = p.length>3 ? p.slice(3).join(' - ') : (p[p.length-1]||'');
   const cidadeReg = SIGLA_CIDADE[sig] || sig;
   return {
@@ -840,7 +840,7 @@ function norm(r){
     'Tipo': tipoTec,
     'Cidade': r['Cidade'] ?? '',
     'Bairro': r['Bairro'] ?? '',
-    'Regional': sig,              
+    'Regional': sig,
     'RegionalNome': cidadeReg,
     'Supervisor': semTecnico ? '' : siglaSupervisor(sig),
     'Defeito': r['Defeito'] ?? '',
@@ -866,13 +866,13 @@ function marcarOsDuplicadas(rows){
   const porConta=new Map();
   rows.forEach(r=>{
     const c=String(r['Conta']||'').trim();
-    if(!c) return;                       
+    if(!c) return;
     porConta.set(c,(porConta.get(c)||0)+1);
   });
   rows.forEach(r=>{
     const c=String(r['Conta']||'').trim();
     const n=c?(porConta.get(c)||0):0;
-    r['_osNaConta']=n;                   
+    r['_osNaConta']=n;
     r['_osDup']=n>1;
   });
   return rows;
@@ -887,8 +887,8 @@ function dupIcon(r){
 function buildSupervisorCards(){
   const host=document.getElementById('supCards');
   if(!host) return;
-  
-  
+
+
   const ORDEM_PREFERIDA=['Alexandre Reis','Rodrigo Lodo','Átilas Souza'];
   const ordem=ORDEM_PREFERIDA.filter(s=>(SUPERVISORES[s]||[]).length)
     .concat(Object.keys(SUPERVISORES).filter(s=>!ORDEM_PREFERIDA.includes(s)&&SUPERVISORES[s].length));
@@ -906,7 +906,7 @@ function buildSupervisorCards(){
   host.querySelectorAll('.supcard').forEach(c=>c.addEventListener('click',()=>{
     const sup=c.dataset.sup;
     activeSupervisor = activeSupervisor===sup ? '' : sup;
-    
+
     sel.regiao.clear(); sel.cidade.clear();
     setupFilters();
     applyFilters();
@@ -916,7 +916,7 @@ function buildSupervisorCards(){
 
 function regionaisPermitidas(){
   if(activeSupervisor&&SUPERVISORES[activeSupervisor]) return new Set(SUPERVISORES[activeSupervisor]);
-  return null; 
+  return null;
 }
 
 
@@ -1085,7 +1085,7 @@ function dark(){return document.documentElement.getAttribute('data-theme')!=='li
 function renderKPIs(){
   const bc={'0-2':0,'3-14':0,'15+':0};
   document.getElementById('headerCount').textContent=filteredData.length.toLocaleString('pt-BR')+' OS';
-  
+
   const perm=regionaisPermitidas();
   const escopo = perm ? rawData.filter(r=>perm.has(r['Regional'])) : rawData;
   ['Instalação','Manutenção Cliente','Manutenção Preventiva','Manutenção Remota','Administrativa','Desinstalação'].forEach(t=>{
@@ -1094,14 +1094,14 @@ function renderKPIs(){
     const icon=t==='Instalação'?'📦':t==='Manutenção Cliente'?'🔧':t==='Manutenção Preventiva'?'📋':t==='Manutenção Remota'?'📡':t==='Administrativa'?'✏️':'🗑️';
     btn.innerHTML=`${icon} ${t} <span style="opacity:.7;font-weight:400">(${c})</span>`;
   });
-  
+
   const dupBtn=document.querySelector('.tos-btn[data-dup]');
   if(dupBtn){
     const cd=escopo.filter(r=>r['_osDup']).length;
     dupBtn.innerHTML=`<span class="dup-ic">!</span>Duplicadas <span style="opacity:.7;font-weight:400">(${cd})</span>`;
   }
   rawData.filter(criarFiltro(true)).forEach(r=>bc[r['Bucket']]++);
-  
+
   let contasSel;
   if(perm){ contasSel=[...perm].reduce((a,s)=>a+(CONTAS_POR_SIGLA[s]||0),0); }
   else { contasSel=CONTAS_TOTAL; }
@@ -1110,7 +1110,7 @@ function renderKPIs(){
   animN(document.getElementById('kpi31'),bc['15+']);
   animN(document.getElementById('kpiContas'),contasSel);
   animN(document.getElementById('kpiTechs'),new Set(filteredData.map(r=>r['Téc. Executor']).filter(Boolean)).size);
-  
+
   const pctEl=document.getElementById('kpiPct');
   if(pctEl){ pctEl.textContent = contasSel>0 ? ((filteredData.length/contasSel)*100).toFixed(1).replace('.',',')+'%' : '—'; }
   const pctSub=document.getElementById('kpiPctSub');
@@ -1132,7 +1132,7 @@ function renderTable(){
     const av=a[col], bv=b[col];
     return typeof av==='string'?av.localeCompare(bv,'pt-BR')*dir:(av-bv)*dir;
   });
-  
+
   document.querySelectorAll('#techHead th[data-sort]').forEach(th=>{
     const arr=th.querySelector('.sort-arr');
     if(!arr)return;
@@ -1196,7 +1196,7 @@ function renderMotivo(){
     applyFilters();
   }
 
-  
+
   const lg=document.getElementById('tipoLegend');
   if(lg){
     lg.innerHTML=dados.map(([k,v])=>{
@@ -1316,7 +1316,7 @@ function parseAgendamento(str){
 function dataEfetiva(d){
   if(!d) return null;
   const r=new Date(d);
-  if(r.getDay()===0) r.setDate(r.getDate()+1); 
+  if(r.getDay()===0) r.setDate(r.getDate()+1);
   return r;
 }
 function proximosDiasUteis(qtd){
@@ -1337,7 +1337,7 @@ function tipoClass(tipo){
   }
 }
 function setupOSSection(){
-  if(document.getElementById('kanbanGrid')) return; 
+  if(document.getElementById('kanbanGrid')) return;
   const oldCard=document.getElementById('osList')?.closest('.card');
   if(!oldCard) return;
   const agCard=document.createElement('div');
@@ -1394,7 +1394,7 @@ function renderAgendadas(){
   const hoje=new Date(); hoje.setHours(0,0,0,0);
   const futuros=proximosDiasUteis(5);
   function fmtDMM(d){return('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);}
-  
+
   const buckets=Array.from({length:7},()=>[]);
   filteredData.forEach(r=>{
     const raw=parseAgendamento(r['Agendamento']); if(!raw) return;
@@ -1402,9 +1402,9 @@ function renderAgendadas(){
     if(t<hoje.getTime()){ buckets[0].push(r); return; }
     if(t===hoje.getTime()){ buckets[1].push(r); return; }
     const fi=futuros.findIndex(fd=>fd.getTime()===t);
-    if(fi!==-1){ buckets[fi+2].push(r); } else { buckets[6].push(r); } 
+    if(fi!==-1){ buckets[fi+2].push(r); } else { buckets[6].push(r); }
   });
-  
+
   buckets.forEach(b=>b.sort(byTipoThenDias));
   const total=buckets.flat().length;
   const pill=document.getElementById('agendadasPill');
@@ -1505,7 +1505,7 @@ document.getElementById('downloadHtmlBtn').addEventListener('click',()=>{
     const osJson=JSON.stringify(EMBED_OS);
     const ctJson=JSON.stringify(EMBED_CONTAS);
     const ctMetaJson=JSON.stringify({semRota:CONTAS_SEM_ROTA,total:CONTAS_TOTAL_EXATO,estimado:CONTAS_ESTIMADAS});
-    
+
     src=src.replace(/\/\*__EMBED_OS_START__\*\/[\s\S]*?\/\*__EMBED_OS_END__\*\//,
       '/*__EMBED_OS_START__*/let EMBED_OS = [];/*__EMBED_OS_END__*/');
     src=src.replace(/\/\*__EMBED_CONTAS_START__\*\/[\s\S]*?\/\*__EMBED_CONTAS_END__\*\//,
@@ -1637,7 +1637,7 @@ async function carregarColetor(silent){
     window.SILENT_INIT = !!silent;
     init();
     window.SILENT_INIT = false;
-    
+
     const ts = (data && data.generatedAt) ? new Date(data.generatedAt) : new Date();
     const p2 = n => String(n).padStart(2,'0');
     const label = p2(ts.getDate())+'/'+p2(ts.getMonth()+1)+' '+p2(ts.getHours())+':'+p2(ts.getMinutes());
@@ -1699,12 +1699,12 @@ function iniciarLive(){
 
 (function _wireLive(){
   const box=document.getElementById('liveBox');
-  if(box) box.addEventListener('click',()=>carregarColetor(false)); 
-  
+  if(box) box.addEventListener('click',()=>carregarColetor(false));
+
   document.addEventListener('visibilitychange',()=>{
     if(document.visibilityState!=='hidden' && COLETOR.timer) carregarColetor(true);
   });
-  iniciarLive();  
+  iniciarLive();
 })();
 </script>
 

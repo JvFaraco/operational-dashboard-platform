@@ -5,6 +5,7 @@ const {chromium}=require('@playwright/test');
 const source=process.argv[2];if(!source)throw Error('Pass the private portal source directory');
 const root=path.resolve(__dirname,'../docs');
 const read=name=>fs.readFileSync(path.join(source,name),'utf8');
+const cleanWhitespace=html=>html.split(/(<style[^>]*>[\s\S]*?<\/style>)/g).map(part=>part.startsWith('<style')?part:part.replace(/[ \t]+$/gm,'')).join('');
 const regionals=[{sigla:'LIT',cidade:'Vila Aurora',uf:'SC',supervisor:'Supervisor Demo A'},{sigla:'VAL',cidade:'Nova Esperança',uf:'SC',supervisor:'Supervisor Demo B'},{sigla:'SER',cidade:'Santa Clara',uf:'SC',supervisor:'Supervisor Demo C'}];
 const siglas={LIT:'Vila Aurora',VAL:'Nova Esperança',SER:'Santa Clara',ADM:'BackOffice',SPV:'Supervisores'};
 const supervisors=Object.fromEntries(regionals.map(row=>[row.supervisor,[row.sigla]]));
@@ -56,7 +57,7 @@ function transformJS(js,replacements){
  admin=admin.replace(/<input([^>]*type="file"[^>]*)>/g,'<input$1 disabled>');
  admin=admin.replace(/<form([^>]*)>/g,'<form$1><fieldset disabled data-demo-form style="display:contents">').replace(/<\/form>/g,'</fieldset></form>');
  admin=admin.replace(/href="\/admin[^\"]*"/g,'href="#" data-demo-action');
- fs.writeFileSync(path.join(root,'admin.html'),admin);
+ fs.writeFileSync(path.join(root,'admin.html'),cleanWhitespace(admin));
  for(const [file,out]of [['dashboard/ControledeOS.html','os.html'],['dashboard/A365_Produtividade.html','produtividade.html'],['routes/mapa_cobertura_rotas.html','rotas.html']]){
   let html=read(file);
   const originalStyles=[...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(match=>match[1]);
@@ -99,7 +100,7 @@ function transformJS(js,replacements){
   // No external source fetches, and no data-query override to internal APIs.
   html=html.replace(/_qs\.get\('data'\)\s*\|\|\s*window\.COLETOR_URL\s*\|\|\s*/g,'');
   html=html.replaceAll('collector → SQLite','base fictícia').replaceAll('(banco, ao vivo)','(base demonstrativa)').replaceAll('Live: ','Demo: ').replaceAll('Live · ativo','Demo · ativo');
-  fs.writeFileSync(path.join(root,out),html);await context.close();
+  fs.writeFileSync(path.join(root,out),cleanWhitespace(html));await context.close();
  }
  fs.writeFileSync(path.join(root,'source-manifest.json'),JSON.stringify(manifest,null,2));
  await browser.close();

@@ -1039,9 +1039,9 @@ function hslToHex(h, s, l) {
   return `#${toHex(f(0))}${toHex(f(8))}${toHex(f(4))}`;
 }
 const PALETA_EPV = [];
-const PALETA_EPV_HUE = []; 
+const PALETA_EPV_HUE = [];
 PALETA_BANDAS_LUM.forEach((lum, bi) => {
-  const fase = bi * 137.508 / PALETA_BANDAS_LUM.length; 
+  const fase = bi * 137.508 / PALETA_BANDAS_LUM.length;
   for (let i = 0; i < 24; i++) {
     const h = (i * 137.508 + fase) % 360;
     PALETA_EPV.push(hslToHex(h, PALETA_SAT, lum));
@@ -1115,16 +1115,16 @@ function corDoRegistro(rec) {
 const state = {
   cache: null, contas: null, volumes: null,
   volumeCity: new Map(), volumeNeighborhood: new Map(), volumeRoute: new Map(),
-  
-  
+
+
   filtros: Object.fromEntries([...Object.keys(SUPERVISORES), "__distante__"].map(b => [b, true])),
-  filtroVinculo: {},   
-  filtroVolume: "all", 
+  filtroVinculo: {},
+  filtroVolume: "all",
   camadas: { cidades: true, bairros: true, pinos: true },
-  busca: "",           
-  ordenacao: "contas", 
-  colapsados: {},      
-  epvs: {},        
+  busca: "",
+  ordenacao: "contas",
+  colapsados: {},
+  epvs: {},
   initialBounds: null,
   lyrCidades: null, lyrBairros: null, grpPinos: null,
   map: null, tile: null
@@ -1159,9 +1159,9 @@ function pinVolumeForRoute(route) {
   if (!state.volumes || !route) return null;
   const routeVolume = state.volumeRoute.get(routeKey(route));
   if (routeVolume == null) return null;
-  
-  
-  
+
+
+
   if (typeof routeVolume === "object") return {
     volume: Number(routeVolume.volume || 0),
     estimated: !!routeVolume.estimated,
@@ -1198,10 +1198,10 @@ function indexVolumes(volumes) {
   state.volumeNeighborhood = new Map();
   state.volumeRoute = new Map();
   if (!volumes) return;
-  
-  
-  
-  
+
+
+
+
   const addVolume = (target, key, value) =>
     target.set(key, Number(target.get(key) || 0) + Number(value || 0));
   for (const row of volumes.byCity || [])
@@ -1222,8 +1222,8 @@ function volumeForRec(rec) {
   const exact = rec.bairro
     ? state.volumeNeighborhood.get(geoKey(rec.uf, rec.cidade, rec.bairro))
     : state.volumeCity.get(geoKey(rec.uf, rec.cidade, ""));
-  
-  
+
+
   const unknownState = rec.bairro
     ? (state.volumeNeighborhood.get(geoKey("", rec.cidade, rec.bairro)) ?? 0)
     : (state.volumeCity.get(geoKey("", rec.cidade, "")) ?? 0);
@@ -1233,9 +1233,9 @@ function volumeForRec(rec) {
 
 function volumeSomadoDasAreas(e) {
   if (!e || !e._areas || !e._areas.size) return null;
-  
-  
-  
+
+
+
   const cidadesInteiras = new Set();
   for (const rec of e._areas.values()) if (!rec.bairro)
     cidadesInteiras.add(geoKey(rec.uf, rec.cidade, ""));
@@ -1311,10 +1311,10 @@ function volumeSnapshotValido(volumes) {
 }
 
 function cacheValido(c) {
-  
-  
-  
-  
+
+
+
+
   return c && typeof c === "object"
     && c.cidades && Object.keys(c.cidades).length;
 }
@@ -1327,7 +1327,7 @@ function showFatal(msg) {
 async function boot() {
   if (typeof L === "undefined")
     return showFatal("A biblioteca de mapas (Leaflet) não carregou do CDN. Verifique o acesso à internet — os tiles do mapa também dependem dela — e recarregue a página.");
-  
+
   if (EMBED_CACHE) {
     if (!cacheValido(EMBED_CACHE))
       return showFatal("Os dados embutidos neste arquivo estão vazios ou incompletos. Gere o arquivo novamente com o <b>build_standalone.py</b>.");
@@ -1341,7 +1341,7 @@ async function boot() {
     }
     return;
   }
-  
+
   let cache = null, contas = null, volumes = null, fetchFalhou = false;
   try {
     [cache, contas, volumes] = await Promise.all([
@@ -1474,42 +1474,42 @@ function chaveDoEpvComErroDeGrafia(epvs, nome) {
 function buildModel() {
   const { cache, contas } = state;
   const epvs = {};
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   for (const [nome, e] of Object.entries(cache.especialistas)) {
     epvs[normName(nome)] = { nome, rota: e.rota || null, rotas: new Set(e.rota ? [e.rota] : []), home: e, contas: null, regional: null, vinculo: null, supervisor: null, obs: null, territorios: new Set(), _pts: [], _areas: new Map() };
   }
-  
+
   if (contas) for (const [nome, c] of Object.entries(contas.especialistas)) {
     const nomeCanonico = canonicalEpvName(nome);
     let k = normName(nomeCanonico);
     if (!epvs[k]) k = chaveDoMesmoEpv(epvs, nomeCanonico) || chaveDoEpvComErroDeGrafia(epvs, nomeCanonico) || k;
-    
-    
-    
-    
+
+
+
+
     if (!epvs[k]) epvs[k] = { nome: nomeCanonico, rota: null, rotas: new Set(), home: null, contas: null, regional: null, vinculo: null, supervisor: null, obs: null, territorios: new Set(), _pts: [], _areas: new Map(), _soContas: true };
     Object.assign(epvs[k], { contas: c.contas, regional: c.regional, vinculo: normVinculo(c.vinculo), supervisor: c.supervisor, obs: c.observacao || null });
   }
-  
-  
-  
-  
+
+
+
+
   const scan = rec => {
     if (!rec.especialista) return;
     let k = normName(rec.especialista);
-    
-    
-    
-    
+
+
+
+
     if (!epvs[k]) k = chaveDoEpvComErroDeGrafia(epvs, rec.especialista) || k;
     if (!epvs[k]) epvs[k] = { nome: rec.especialista, rota: null, rotas: new Set(), home: null, contas: null, regional: null, vinculo: null, supervisor: null, obs: null, territorios: new Set(), _pts: [], _areas: new Map() };
     const e = epvs[k];
-    
+
     e._soContas = false;
     e.regional = e.regional || rec.regional || null;
     e.vinculo = e.vinculo || normVinculo(rec.vinculo) || null;
@@ -1533,7 +1533,7 @@ function buildModel() {
   Object.values(cache.cidades).forEach(scan);
   Object.values(cache.bairros || {}).forEach(scan);
 
-  
+
   const orfaosDeContas = Object.keys(epvs).filter(k => {
     const e = epvs[k];
     return e._soContas && !e.home && (!e.rotas || e.rotas.size === 0);
@@ -1543,11 +1543,11 @@ function buildModel() {
     console.info(`[mapa] ${orfaosDeContas.length} EPV(s) fora do mapa: só constam `
       + `no Contas x EPV.xlsx, sem cadastro de endereço e sem rota.`);
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   if (state.volumes) for (const e of Object.values(epvs)) {
     const routeVolume = pinVolumeForRoutes(e);
     const geographicVolume = volumeSomadoDasAreas(e);
@@ -1564,7 +1564,7 @@ function buildModel() {
       e.contasEstimadas = true;
       e.fonteVolume = "estimativa da rota";
     } else if (e.contas != null) {
-      
+
       e.contasEstimadas = true;
       e.semCoberturaViva = true;
       e.fonteVolume = "planilha Contas x EPV — sem rota na API";
@@ -1572,28 +1572,28 @@ function buildModel() {
   }
   state.epvs = epvs;
 
-  
+
   const hex2rgb = s => [1, 3, 5].map(i => parseInt(s.slice(i, i + 2), 16));
   const RGB = PALETA_EPV.map(hex2rgb);
-  const dCor = (a, b) => { 
+  const dCor = (a, b) => {
     const rm = (a[0] + b[0]) / 2, dr = a[0]-b[0], dg = a[1]-b[1], db = a[2]-b[2];
     return Math.sqrt((2 + rm/256)*dr*dr + 4*dg*dg + (2 + (255-rm)/256)*db*db);
   };
-  const dHue = (a, b) => { 
+  const dHue = (a, b) => {
     const d = Math.abs(a - b) % 360;
     return d > 180 ? 360 - d : d;
   };
-  const DIST_VIZINHO_KM = 300; 
+  const DIST_VIZINHO_KM = 300;
   const haversineKm = (a, b) => {
     const R = 6371, toRad = d => d * Math.PI / 180;
     const dLat = toRad(b[0] - a[0]), dLng = toRad(b[1] - a[1]);
     const s = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a[0])) * Math.cos(toRad(b[0])) * Math.sin(dLng / 2) ** 2;
     return 2 * R * Math.asin(Math.sqrt(s));
   };
-  
-  
-  
-  
+
+
+
+
   function posicaoEpv(e) {
     if (e.home && e.home.lat != null && e.home.lng != null) return [e.home.lat, e.home.lng];
     if (e._pts && e._pts.length) {
@@ -1603,26 +1603,26 @@ function buildModel() {
     }
     return null;
   }
-  
+
   const atribuidos = [];
-  
-  
+
+
   const candidatosBase = PALETA_EPV.map((hex, i) => ({ hex, rgb: RGB[i], idx: i, hue: PALETA_EPV_HUE[i] }));
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
   const D0_KM = 55;
   const pesoProx = d => 1 / (1 + (d / D0_KM) ** 2);
 
-  
-  
+
+
   const porSup = {};
   for (const e of Object.values(epvs)) (porSup[epvBucket(e)] = porSup[epvBucket(e)] || []).push(e);
   const ordem = [];
@@ -1637,33 +1637,33 @@ function buildModel() {
   }
   for (const e of ordem) {
     const pos = posicaoEpv(e);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const K = 95;
     const H0 = 30;
     let melhor = null, melhorPen = Infinity;
@@ -1672,8 +1672,8 @@ function buildModel() {
       for (const a of atribuidos) {
         const dist = (!pos || !a.pos) ? DIST_VIZINHO_KM : haversineKm(pos, a.pos);
         const w = pesoProx(dist);
-        const simCor = 1 / (1 + (dCor(c.rgb, a.rgb) / K) ** 2);  
-        const simHue = 1 / (1 + (dHue(c.hue, a.hue) / H0) ** 2); 
+        const simCor = 1 / (1 + (dCor(c.rgb, a.rgb) / K) ** 2);
+        const simHue = 1 / (1 + (dHue(c.hue, a.hue) / H0) ** 2);
         pen += w * Math.max(simCor, simHue);
       }
       if (pen < melhorPen - 1e-9) { melhorPen = pen; melhor = c; }
@@ -1738,7 +1738,7 @@ function popupBairro(rec) {
 function popupEpv(e) {
   const h = e.home || {};
   const aprox = h.precisao && h.precisao !== "endereco";
-  
+
   const avisos = [];
   if (e.semCoberturaViva)
     avisos.push("Este EPV não tem NENHUMA rota atribuída na API do UbiDesk, "
@@ -1774,14 +1774,14 @@ function styleCidade(f) {
 }
 function styleBairro(f) {
   const cor = f.properties.cor;
-  
-  
-  
-  
+
+
+
+
   const p = f.properties.rec && f.properties.rec.precisao;
-  
-  
-  
+
+
+
   const estimativa = p === "buffer" || p === "voronoi" || p === "distrito_pai";
   return estimativa
     ? { color: cor, weight: 1, dashArray: "4 4", fillColor: cor, fillOpacity: 0.14, opacity: 0.85 }
@@ -1841,7 +1841,7 @@ function start(cache, contas, volumes = null) {
   state.map = map;
   applyTiles();
 
-  
+
   const featCid = [];
   for (const rec of Object.values(cache.cidades)) {
     const bucket = resolveBucket(rec);
@@ -1858,7 +1858,7 @@ function start(cache, contas, volumes = null) {
     onEachFeature: (f, l) => l.bindPopup(() => popupCidade(f.properties.rec), { maxWidth: 330 })
   }).addTo(map);
 
-  
+
   const featBai = [];
   let bairrosOcultos = 0;
   for (const rec of Object.values(cache.bairros || {})) {
@@ -1871,19 +1871,19 @@ function start(cache, contas, volumes = null) {
       else if (p.type === "Feature") push(p.geometry);
       else push(p);
     } else if (!rec.fundido_em) {
-      bairrosOcultos++;   
-      
-      
-      
+      bairrosOcultos++;
+
+
+
     }
   }
   state.bairrosOcultos = bairrosOcultos;
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   const _areaAnel = anel => {
     let a = 0;
     for (let i = 0, n = anel.length, j = n - 1; i < n; j = i++)
@@ -1902,13 +1902,13 @@ function start(cache, contas, volumes = null) {
     onEachFeature: (f, l) => l.bindPopup(() => popupBairro(f.properties.rec), { maxWidth: 330 })
   }).addTo(map);
 
-  
+
   state.grpPinos = L.layerGroup().addTo(map);
   for (const e of Object.values(state.epvs)) {
-    
-    
-    
-    
+
+
+
+
     if (!e.home || e.home.lat == null || e.home.lng == null) continue;
     const bucket = epvBucket(e);
     const aprox = e.home.precisao && e.home.precisao !== "endereco";
@@ -1917,10 +1917,10 @@ function start(cache, contas, volumes = null) {
       color: "#ffffff", weight: 2,
       dashArray: aprox ? "3 3" : null,
       fillColor: e.cor,
-      
-      
-      
-      
+
+
+
+
       fillOpacity: (e.contas == null || e.semCoberturaViva) ? 0.35 : 0.88, opacity: 1
     }).bindPopup(() => popupEpv(e), { maxWidth: 280 });
     m._meta = { bucket, kind: "pino", epv: e };
@@ -1943,9 +1943,9 @@ function start(cache, contas, volumes = null) {
 function applyTiles() {
   const dark = document.documentElement.dataset.theme === "dark";
   if (state.tile) state.map.removeLayer(state.tile);
-  
-  
-  
+
+
+
   // antes (overlayPane do Leaflet é z-index 400).
   if (!state.map.getPane("baseTiles")) {
     state.map.createPane("baseTiles").style.zIndex = 200;
@@ -1986,7 +1986,7 @@ function renderSidebar() {
   if (state.bairrosOcultos)
     badgeBai.title = `${state.bairrosOcultos} bairros sem contorno próprio estão ocultos (só polígonos são exibidos)`;
 
-  
+
   const cont = document.getElementById("supFilters");
   cont.innerHTML = "";
   const buckets = [...Object.keys(SUPERVISORES), "__distante__"];
@@ -2008,7 +2008,7 @@ function renderSidebar() {
     cont.appendChild(lab);
   }
 
-  
+
   const vinculos = [...new Set(epvs.map(e => e.vinculo || "Sem vínculo"))].sort();
   for (const v of vinculos) if (state.filtroVinculo[v] === undefined) state.filtroVinculo[v] = true;
   const vcont = document.getElementById("vinculoFilters");
@@ -2088,11 +2088,11 @@ function renderEpvList() {
     if (!grupoTodos.length) continue;
     const grupo = ordenarGrupo(grupoTodos.filter(passaFiltroEpv));
     const tot = grupoTodos.reduce((s, e) => s + (e.contas || 0), 0);
-    
-    
-    
-    
-    
+
+
+
+
+
     const totEstimado = grupoTodos.some(e => e.contas != null && e.contasEstimadas);
     const g = document.createElement("div");
     g.className = "epv-group" + (state.colapsados[sup] ? " collapsed" : "");
@@ -2168,12 +2168,12 @@ const DIM = { opacity: 0.05, fillOpacity: 0.02 };
 function applyFilters() {
   const f = state.filtros;
 
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   const epvDoRec = rec => rec.especialista ? state.epvs[normName(rec.especialista)] : null;
 
   state.lyrCidades.eachLayer(l => {

@@ -746,8 +746,8 @@ const META_MEDIA_DIA_OK = 5.0;
 const META_MEDIA_DIA_ATENCAO = 4.0;
 
 
-const META_NAO_RETIRADO_OK = 20.0;       
-const META_NAO_RETIRADO_ATENCAO = 30.0;  
+const META_NAO_RETIRADO_OK = 20.0;
+const META_NAO_RETIRADO_ATENCAO = 30.0;
 
 const SIGLA_CIDADE = {"LIT":"Vila Aurora","VAL":"Nova Esperança","SER":"Santa Clara","ADM":"BackOffice","SPV":"Supervisores"};
 
@@ -789,17 +789,17 @@ function parseTecFull(t){
 function siglaEfetiva(tf){
   const chave = valor => String(valor||'').normalize('NFD')
     .replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/\s+/g,' ').trim();
-  
-  
+
+
   if(chave(tf.nome)==="TECNICO DEMO ESPECIAL"||chave(tf.sigla)==="TECNICO DEMO ESPECIAL") return 'SPO';
   return String(tf.sigla||'').trim().toUpperCase();
 }
 
 function contratoOf(tp, sigla){
   const v=(tp||'').toUpperCase(); const s=(sigla||'').toUpperCase();
-  
-  
-  
+
+
+
   if(v==='EPV'||v==='SPV'||s==='SPV'||v.replace(/[\s-]/g,'')==='TECEPV') return 'CLT';
   if(v.includes('FILIAL')) return '-';
   return v||'-';
@@ -839,7 +839,7 @@ function aplicarRegionais(lista){
   if(!Object.keys(novo).length) return false;
   const antes=JSON.stringify([SIGLA_CIDADE,SUPERVISORES]);
   Object.assign(SIGLA_CIDADE,cidades);
-  
+
   const ordem=Object.keys(SUPERVISORES);
   ordem.forEach(s=>{delete SUPERVISORES[s];});
   ordem.filter(s=>novo[s]).concat(Object.keys(novo).filter(s=>!ordem.includes(s)))
@@ -853,7 +853,7 @@ async function carregarRegionais(){
     if(!resp.ok) return false;
     const data=await resp.json();
     return aplicarRegionais(data&&data.regionais);
-  }catch(e){ return false; }  
+  }catch(e){ return false; }
 }
 function embutirRegionais(src){
   const json=JSON.stringify(EMBED_REGIONAIS).replace(/</g,'\\u003c');
@@ -918,8 +918,8 @@ function resultadoRetirada(tipo, solucao){
   if(tipo!=='DESINSTALAÇÃO') return '';
   const s = _semAcento(solucao);
   if(s.indexOf('EQUIPAMENTO')<0) return '';
-  
-  
+
+
   if(s.indexOf('NAO RETIRAD')>=0) return 'NAO_RETIRADO';
   if(s.indexOf('RETIRADOS TOTAL')>=0) return 'TOTAL';
   if(s.indexOf('RETIRADOS PARCIAL')>=0) return 'PARCIAL';
@@ -1013,8 +1013,8 @@ function norm(r){
   if(!fech) return null;
   const tf = parseTecFull(r['Téc. Executor']);
   const sigla = siglaEfetiva(tf);
-  
-  
+
+
   const execDeSistema = ehExecutorDeSistema(r['Téc. Executor']);
   const tipoBase = tipoOf(r['Tipo OS']);
   const sol = (r['Solicitante']||'').toUpperCase().trim();
@@ -1280,8 +1280,8 @@ function activeAccountVolume(){
   else if(filterSupervisor && SUPERVISORES[filterSupervisor])
     regionNames = new Set(SUPERVISORES[filterSupervisor].map(s=>SIGLA_CIDADE[s]||s));
   if(!regionNames) return Number(ACCOUNT_VOLUMES.total||0);
-  
-  
+
+
   return (ACCOUNT_VOLUMES.byRegional||[]).reduce((sum,row)=>{
     const name=SIGLA_CIDADE[row.sigla]||row.sigla;
     return sum+(regionNames.has(name)?Number(row.contas||0):0);
@@ -1292,7 +1292,7 @@ function renderKPIs(){
   const el = document.getElementById('kpiRow1');
   const n = filteredData.length;
 
-  
+
   const comp = getPeriodComparison();
   let deltaHtml = '';
   if(comp){
@@ -1301,21 +1301,21 @@ function renderKPIs(){
     deltaHtml = `<div class="kdelta ${cls}">${sign}${fmtDec(comp.delta, 1)}% vs período anterior</div>`;
   }
 
-  
+
   const allDays = new Set(filteredData.filter(r=>isWeekday(r.DiaKey)).map(r=>r.DiaKey)).size;
   const [dStart,dEnd] = getDateRange(filterPeriodo);
   const mediaDia = n / Math.max(1, allDays);
   const mediaColor = colorMediaDia(mediaDia);
 
-  
+
   const tecAtivos = new Set(filteredData.filter(r=>r.Exec).map(r=>r.Exec)).size;
 
-  
+
   const byTec = {};
   filteredData.forEach(r=>{ if(r.Exec) byTec[r.Exec]=(byTec[r.Exec]||0)+1; });
   const topTec = Object.entries(byTec).sort((a,b)=>b[1]-a[1])[0];
 
-  
+
   const proj = getMonthProjection();
   el.classList.toggle('without-projection', !proj);
   const accountVolume = activeAccountVolume();
@@ -1364,7 +1364,7 @@ function renderKPIs(){
       ${topTec?`<div class="khi">${topTec[1]} OS fechadas</div>`:''}
     </div>`;
 
-  
+
   const kt = document.getElementById('kpiTopTec');
   if(kt && topTec){
     kt.addEventListener('click',()=>{
@@ -1385,7 +1385,7 @@ function renderRetiradaKPIs(){
   const pctColor = pct!==null ? colorPctNaoRetirado(pct) : 'var(--muted)';
   const pctOf = v => s.desinst>0 ? fmtDec(v/s.desinst*100, 1)+'%' : '—';
 
-  
+
   const PISO_RANKING = 10;
   const byTec = {};
   filteredData.forEach(r=>{
@@ -1394,13 +1394,13 @@ function renderRetiradaKPIs(){
     const t = byTec[r.Exec];
     t.tot++;
     if(r.ResultadoRetirada==='NAO_RETIRADO') t.nao++;
-    else if(r.ResultadoRetirada) t.ret++;  
+    else if(r.ResultadoRetirada) t.ret++;
   });
-  
+
   const ranking = Object.entries(byTec)
     .filter(([,v])=>(v.ret+v.nao)>=PISO_RANKING)
     .map(([k,v])=>({nome:k, tot:v.tot, nao:v.nao, ret:v.ret, pctNao:v.nao/v.tot*100}));
-  
+
   const top = ranking.slice().sort((a,b)=>a.pctNao-b.pctNao || b.tot-a.tot)[0];
 
   el.innerHTML = `
@@ -1433,7 +1433,7 @@ function renderRetiradaKPIs(){
            :`<div class="khi">min. ${PISO_RANKING} desinstalações para ranking por EPV</div>`}
     </div>`;
 
-  
+
   const kr = document.getElementById('kpiTopRetirada');
   if(kr && top){
     kr.style.cursor = 'pointer';
@@ -1456,7 +1456,7 @@ function renderRECREDKPIs(){
   const pct = (suc+nosuc)>0 ? (suc/(suc+nosuc)*100) : 0;
   const pctColor = colorPctRecred(pct);
 
-  
+
   const byTecRecred = {};
   recredRows.forEach(r=>{
     if(!r.Exec) return;
@@ -1766,7 +1766,7 @@ function renderTrendChart(){
         const yPos = y.getPixelForValue(total);
         const text = trendMetric==='qty' ? String(total) : fmtDec(Math.round(total*100)/100, 2);
         if(i===maxIdx || i===minIdx){
-          
+
           const color = i===maxIdx ? minColor : maxColor;
           ctx.font='bold 13px sans-serif';
           ctx.textAlign='center';
@@ -1903,7 +1903,7 @@ function renderTrendChart(){
 }
 
 function buildExecStats(){
-  
+
   let fimDoRecorte = null;
   filteredData.forEach(r=>{ if(r.Fechamento && (!fimDoRecorte || r.Fechamento > fimDoRecorte)) fimDoRecorte = r.Fechamento; });
   const ref = fimDoRecorte ? new Date(fimDoRecorte) : new Date();
@@ -1947,9 +1947,9 @@ function buildExecStats(){
     const diasUteis = Math.max(1, t.dias.size);
     const media = t.total / diasUteis;
     const pctRec = (t.sucRecred+t.nosucRecred)>0 ? t.sucRecred/(t.sucRecred+t.nosucRecred)*100 : null;
-    
-    
-    
+
+
+
     const pctNaoRet = t.desinst>0 ? t.naoRetirado/t.desinst*100 : null;
     return {...t, diasUteis, media, pctRec, pctNaoRet};
   });
@@ -1965,7 +1965,7 @@ function renderExecTable(){
   }
   pill.textContent = stats.length+' EPV';
 
-  
+
   stats.sort((a,b)=>{
     const v = {'exec':r=>r.exec,'regional':r=>r.regional,'inst':r=>r.inst,'desinst':r=>r.desinst,
       'manutPrev':r=>r.manutPrev,'manutCli':r=>r.manutCli,
@@ -1977,10 +1977,10 @@ function renderExecTable(){
     return sortExecDir==='asc'?va-vb:vb-va;
   });
 
-  
+
   const tot = {inst:0,desinst:0,manutPrev:0,manutCli:0,recred:0,atendImp:0,desatTemp:0,total:0,sucRecred:0,nosucRecred:0};
   stats.forEach(t=>{ for(const k in tot) tot[k]+=t[k]||0; });
-  
+
   const diasDasLinhas = new Set();
   stats.forEach(t=>t.dias.forEach(d=>diasDasLinhas.add(d)));
   const totMediaDia = tot.total / Math.max(1, diasDasLinhas.size);
@@ -2086,7 +2086,7 @@ function renderDesinstTable(){
   const tot = {desinst:0,retTotal:0,retParcial:0,retSemDetalhe:0,naoRetirado:0};
   stats.forEach(t=>{ for(const k in tot) tot[k]+=t[k]||0; });
   const totPctNaoRet = tot.desinst>0 ? tot.naoRetirado/tot.desinst*100 : null;
-  
+
   const temSemDetalhe = tot.retSemDetalhe > 0;
 
   const thClass = c => `${c===sortDesinstCol ? (sortDesinstDir==='asc'?'sort-asc':'sort-desc') : ''}`;
@@ -2390,10 +2390,10 @@ function exportCsv(){
 function exportExecCsv(){
   const stats = buildExecStats();
   if(!stats.length){ showToast('Sem dados na tabela executiva.','err'); return; }
-  
-  
-  
-  
+
+
+
+
   const header = 'Filial;Tipo;EPV;Instalações;Desinstalações;Equip.Retirados TOTAL;Equip.Retirados PARCIAL;'
     + 'Equip.Retirados s/ detalhe;Equip.NÃO Retirados;% Não Retirados;'
     + 'Man.Preventiva;Man.Cliente;ADM/RECRED;ADM/Atend.Imp;ADM/Desat.Temp;Total OS;Média/Dia;'
@@ -2428,8 +2428,8 @@ function downloadHtml(){
       ? r.Fechamento.toISOString()
       : r.Fechamento
   }));
-  
-  
+
+
   const dataStr = JSON.stringify(snapshotRows).replace(/</g,'\\u003c');
   const metaStr = localStorage.getItem('a365prod_lastUpdate') || new Date().toISOString();
   const html = embutirRegionais('<!DOCTYPE html>'+document.documentElement.outerHTML);
@@ -2520,8 +2520,8 @@ async function carregarProdutividade(silencioso){
   try{
     const sep = PRODUTIVIDADE.url.includes('?') ? '&' : '?';
     const headers = {};
-    
-    
+
+
     if(PRODUTIVIDADE.etag) headers['If-None-Match'] = PRODUTIVIDADE.etag;
     const resp = await fetch(PRODUTIVIDADE.url + sep + '_t=' + Date.now(), {cache:'no-store', headers});
     if(resp.status === 304){
@@ -2538,9 +2538,9 @@ async function carregarProdutividade(silencioso){
     const rows = Array.isArray(data) ? data : (data && data.rows) || [];
     const novo = rows.map(norm).filter(Boolean);
     if(!novo.length){
-      
-      
-      
+
+
+
       PRODUTIVIDADE.erro=false;
       PRODUTIVIDADE.vazio=true;
       PRODUTIVIDADE.carregou=false;
@@ -2577,9 +2577,9 @@ function iniciarLiveProdutividade(){
   if(PRODUTIVIDADE.timer) clearInterval(PRODUTIVIDADE.timer);
   atualizarLiveUI();
   REGIONAIS.pronto.then(()=>carregarProdutividade(true)).then(ok=>{
-    
-    
-    
+
+
+
     if(!ok && !rawData.length) loadEmbeddedData();
   });
   carregarVolumeContas();
@@ -2598,15 +2598,15 @@ function loadEmbeddedData(){
   if(!match||!match[1].trim()) return;
   try{
     const parsed = JSON.parse(match[1]);
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     const cru = parsed.length > 0 && parsed[0] && parsed[0]['Téc. Executor'] !== undefined;
     const base = cru ? parsed.map(norm).filter(Boolean) : parsed;
     rawData = base.map(r=>{
@@ -2716,7 +2716,7 @@ const picker = {
       if(inRange&&!other) c+=' cr-range';
       if(isRS) c+=' cr-rstart';
       if(isRE) c+=' cr-rend';
-      const d2=new Date(dt); 
+      const d2=new Date(dt);
       return `<div class="${c}" data-iso="${d2.getFullYear()}-${String(d2.getMonth()+1).padStart(2,'0')}-${String(d2.getDate()).padStart(2,'0')}">${new Date(dt).getDate()}</div>`;
     };
 
@@ -2846,7 +2846,7 @@ function ativarAnimacoesSidebar(sidebar){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-  
+
   const layout = document.getElementById('layout');
   const sidebarToggle = document.getElementById('sidebarToggle');
   const sidebarBackdrop = document.getElementById('sidebarBackdrop');
@@ -2890,7 +2890,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(mobileSidebar.addEventListener) mobileSidebar.addEventListener('change',onViewportChange);
   else mobileSidebar.addListener(onViewportChange);
 
-  
+
   document.getElementById('themeToggle').addEventListener('click',()=>{
     const d = document.documentElement;
     const next = d.dataset.theme==='dark'?'light':'dark';
@@ -2901,15 +2901,15 @@ document.addEventListener('DOMContentLoaded',()=>{
   const savedTheme = localStorage.getItem('a365prod_theme');
   if(savedTheme) document.documentElement.dataset.theme=savedTheme;
 
-  
+
   document.getElementById('downloadHtmlBtn').addEventListener('click',downloadHtml);
 
-  
+
   document.querySelectorAll('.bpill[data-p]').forEach(pill=>{
     pill.addEventListener('click',()=>{
       const isActive = pill.classList.contains('active');
       document.querySelectorAll('.bpill[data-p]').forEach(p=>p.classList.remove('active'));
-      
+
       customRangeStart=null; customRangeEnd=null;
       if(picker.el) picker.close();
       crUpdateBtn('start',null); crUpdateBtn('end',null);
@@ -2926,7 +2926,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  
+
   document.getElementById('crBtnStart').addEventListener('click',e=>{
     e.stopPropagation();
     if(picker.el&&picker.field==='start'){ picker.close(); return; }
@@ -2943,7 +2943,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   document.addEventListener('click',()=>{ if(picker.el) picker.close(); });
 
-  
+
   document.getElementById('applyCustomRange').addEventListener('click',()=>{
     if(!customRangeStart && !customRangeEnd){ showToast('Selecione ao menos uma data.','err'); return; }
     if(customRangeStart && customRangeEnd && customRangeStart > customRangeEnd){
@@ -2957,7 +2957,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     applyFilters();
   });
 
-  
+
   document.getElementById('btnSabado').addEventListener('click',()=>{
     filterSabado=!filterSabado;
     document.getElementById('btnSabado').classList.toggle('active',filterSabado);
@@ -2969,7 +2969,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     applyFilters();
   });
 
-  
+
   document.querySelectorAll('.mes-tab[data-g]').forEach(tab=>{
     tab.addEventListener('click',()=>{
       document.querySelectorAll('.mes-tab[data-g]').forEach(t=>t.classList.remove('active'));
@@ -2982,14 +2982,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
 
 
-  
+
   document.getElementById('clearPeriod').addEventListener('click',()=>{
     activePeriodKey=null;
     document.getElementById('clearPeriod').style.display='none';
     applyFilters();
   });
 
-  
+
   document.querySelectorAll('.tos-btn[data-tos]').forEach(btn=>{
     btn.addEventListener('click',()=>{
       btn.classList.toggle('tos-active');
@@ -3000,7 +3000,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  
+
   document.querySelectorAll('.tos-btn[data-contrato]').forEach(btn=>{
     btn.addEventListener('click',()=>{
       btn.classList.toggle('tos-active');
@@ -3010,7 +3010,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  
+
   document.querySelectorAll('.tos-btn[data-sub]').forEach(btn=>{
     btn.addEventListener('click',()=>{
       btn.classList.toggle('tos-active');
@@ -3020,26 +3020,26 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  
+
   initMultiSelect('mes', ()=>filterMes, ()=>applyFilters());
 
-  
+
   document.getElementById('clearFilters').addEventListener('click',()=>clearAllFilters());
   document.getElementById('filterIndicatorClear').addEventListener('click',()=>clearAllFilters());
 
-  
+
   document.getElementById('exportCsvBtn').addEventListener('click',exportCsv);
   document.getElementById('exportExecBtn').addEventListener('click',exportExecCsv);
 
-  
+
   initMultiSelect('regiao', ()=>filterRegions, ()=>applyFilters());
   initMultiSelect('defeito', ()=>filterDefeitos, ()=>applyFilters());
   initMultiSelect('problema', ()=>filterProblemas, ()=>applyFilters());
   initMultiSelect('solucao', ()=>filterSolucoes, ()=>applyFilters());
 
-  
-  
-  
+
+
+
   const liveBox=document.getElementById('liveBox');
   if(liveBox){
     const atualizarAgora=()=>carregarProdutividade(false);
@@ -3056,8 +3056,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   iniciarLiveProdutividade();
 
-  
-  
+
+
   if(!rawData.length) render();
 });
 </script>
